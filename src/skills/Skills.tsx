@@ -1,11 +1,12 @@
 import React from 'react';
 import s from './Skills.module.css';
 import stylesContainer from '../common/styles/Container.module.css';
+import {v1} from 'uuid';
 
 
 
 const skills = [
-    {id:}
+    {id:v1()}
 ]
 
 
