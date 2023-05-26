@@ -1,3 +1,11 @@
 .footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+    background-color: lightgrey;
+}
 
+.links{
+border: 1px solid;
 }
