@@ -1,0 +1,33 @@
+.contact {
+    background-color: bisque;
+}
+
+.contactContainer {
+    flex-direction: column;
+}
+
+.title {
+
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid;
+}
+
+.inputs {
+
+}
+
+.textarea {
+
+
+}
+
+.button {
+    width: 30px;
+    height: 15px;
+}

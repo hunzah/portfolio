@@ -3,7 +3,6 @@ import s from './MyProjects.module.css'
 import stylesContainer from './../common/styles/Container.module.css'
 import Project from './project/Project';
 import {v1} from 'uuid';
-import {SkillsType} from '../skills/Skills';
 
 export type ProjectsType = {
     id: string
