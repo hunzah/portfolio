@@ -1,12 +1,18 @@
-.skill{
+.skill {
+    width: 250px;
+    border: 1px solid;
+}
+
+.img {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+}
+
+.title {
 
 }
-.img{
 
-}
-.title{
-
-}
-.text{
+.text {
 
 }

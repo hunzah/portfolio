@@ -8,17 +8,18 @@ type PropsType = {
 
 const Skill = (props: PropsType) => {
     return (
-        <div className={s.skill}>{
-            props.skills.map(item => {
+        <>
+            {props.skills.map(item => {
                 return (
-                    <>
-                        <img alt={item.title} src={item.img} className={s.img}/>
+                    <div className={s.skill}>
+                        {/*<img alt={item.title} src={item.img} className={s.img}/>*/}
+                        <div className={s.img}></div>
                         <h3 className={s.title}>{item.title}</h3>
                         <p className={s.text}>{item.text}</p>
-                    </>
+                    </div>
                 )
             })}
-        </div>
+        </>
     )
 };
 
