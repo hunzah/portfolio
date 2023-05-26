@@ -15,8 +15,8 @@ const skills:SkillsType[] = [
     {id: v1(), title: 'TS', text: 'text', img: 'img'},
     {id: v1(), title: 'React', text: 'text', img: 'img'},
     {id: v1(), title: 'JS', text: 'text', img: 'img'},
-    {id: v1(), title: 'CSS', text: 'text', img: 'img'},
-    {id: v1(), title: 'HTML', text: 'text', img: 'img'},
+    // {id: v1(), title: 'CSS', text: 'text', img: 'img'},
+    // {id: v1(), title: 'HTML', text: 'text', img: 'img'},
 ]
 
 
