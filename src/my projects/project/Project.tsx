@@ -7,16 +7,19 @@ type PropsType = {
 }
 
 const Project = (props: PropsType) => {
-    const {projects}=props
+    const {projects} = props
     return (
         <>
             {projects.map(item => {
                 return (
                     <div className={s.project} key={item.id}>
-                        <img alt={item.title} src={item.img} className={s.img}/>
-                        <a href={item.link}></a>
+
+                        <div className={s.imgContainer}>
+                            {/*<img alt={item.title} src={item.img} className={s.img}/>*/}
+                            <a href={item.link}>Watch</a>
+                        </div>
                         <h3 className={s.title}>{item.title}</h3>
-                        <p className={s.text}>{item.description}</p>
+                        <p className={s.description}>{item.description}</p>
                     </div>
                 )
             })}
