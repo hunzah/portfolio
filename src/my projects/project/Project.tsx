@@ -7,9 +7,12 @@ type PropsType = {
     projects: ProjectsType[]
 }
 
-const SocialNetwork = {
-    backgroundImage: `url(${socialNetwork})`,
-};
+// const SocialNetwork = {
+//     backgroundImage: `url(${socialNetwork})`,
+// };
+const backgroundImage = `url(${socialNetwork})`
+
+
 const Project = (props: PropsType) => {
     const {projects} = props
     return (
@@ -17,10 +20,8 @@ const Project = (props: PropsType) => {
             {projects.map(item => {
                 return (
                     <div className={s.project} key={item.id}>
-                        <div className={s.imgContainer} style={SocialNetwork}>
+                        <div className={s.imgContainer} style={{backgroundImage:`url(${socialNetwork})`}}>
                             {/*<img alt={item.title} src={item.img} className={s.img} style={props.backgroundImage}/>*/}
-                            <div style={SocialNetwork}>
-                            </div>
                             <a href={item.link}>Watch</a>
                         </div>
                         <div className={s.projectInfo}>
