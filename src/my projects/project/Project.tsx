@@ -13,13 +13,14 @@ const Project = (props: PropsType) => {
             {projects.map(item => {
                 return (
                     <div className={s.project} key={item.id}>
-
                         <div className={s.imgContainer}>
-                            {/*<img alt={item.title} src={item.img} className={s.img}/>*/}
+                            <img alt={item.title} src={item.img} className={s.img}/>
                             <a href={item.link}>Watch</a>
                         </div>
-                        <h3 className={s.title}>{item.title}</h3>
-                        <p className={s.description}>{item.description}</p>
+                        <div className={s.projectInfo}>
+                            <h3 className={s.title}>{item.title}</h3>
+                            <p className={s.description}>{item.description}</p>
+                        </div>
                     </div>
                 )
             })}
