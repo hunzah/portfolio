@@ -12,3 +12,8 @@ background-color: aqua;
     border: 1px solid;
     width: 100%;
 }
+@media screen and (max-width: 1129px) {
+    .projects {
+        justify-content: center;
+    }
+}

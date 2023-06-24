@@ -20,15 +20,14 @@
     align-items: center;
     border: 1px solid;
 }
-
+.form input, .form textarea {
+    width: 100%;
+}
 .inputs {
 
-    width: 100%;
 }
 
 .textarea {
-
-width: 100%;
 
 }
 
