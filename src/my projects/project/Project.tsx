@@ -14,7 +14,8 @@ const Project = (props: PropsType) => {
                 return (
                     <div className={s.project} key={item.id}>
                         <div className={s.imgContainer}>
-                            <img alt={item.title} src={item.img} className={s.img}/>
+                            {/*<img alt={item.title} src={item.img} className={s.img} style={props.backgroundImage}/>*/}
+                            <div style={item.img}></div>
                             <a href={item.link}>Watch</a>
                         </div>
                         <div className={s.projectInfo}>

@@ -4,11 +4,11 @@ import stylesContainer from './../common/styles/Container.module.css'
 import Project from './project/Project';
 import {v1} from 'uuid';
 import {Title} from '../common/components/title/Title';
-import socialNetwork  from '../assets/images/social-network.svg';
+import socialNetwork  from '../assets/images/San Andreas.jpg';
 
 export type ProjectsType = {
     id: string
-    img: string
+    img: { backgroundImage: string }
     link: string
     title: string
     description: string
@@ -16,13 +16,12 @@ export type ProjectsType = {
 
 
 const projects: ProjectsType[] = [
-    {id: v1(), img: 'img', link: '', title: 'Social Network', description: 'text text text text text text text text text text text text text text text text text text text text'},
-    {id: v1(), img: 'img', link: '', title: 'Todo List', description: 'text'},
+    {id: v1(), img: {backgroundImage: `url(${socialNetwork})`}, link: '', title: 'Social Network', description: 'text text text text text text text text text text text text text text text text text text text text'},
+    {id: v1(), img: {backgroundImage: `url(${socialNetwork})`}, link: '', title: 'Todo List', description: 'text'},
 
 ]
 const SocialNetwork = {
-    color: 'blue',
-    backgroundImage: 'url(' + '../assets/images/social-network.svg' + ')',
+    backgroundImage: `url(${socialNetwork})`,
 };
 
 const MyProjects = () => {
