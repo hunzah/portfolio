@@ -13,7 +13,7 @@
     justify-content: center;
     display: flex;
     align-items: center;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
 }
 

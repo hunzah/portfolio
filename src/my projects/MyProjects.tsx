@@ -20,9 +20,7 @@ const projects: ProjectsType[] = [
     {id: v1(), img: {backgroundImage: `url(${socialNetwork})`}, link: '', title: 'Todo List', description: 'text'},
 
 ]
-const SocialNetwork = {
-    backgroundImage: `url(${socialNetwork})`,
-};
+
 
 const MyProjects = () => {
 

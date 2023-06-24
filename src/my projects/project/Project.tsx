@@ -1,11 +1,15 @@
 import React from 'react';
 import s from './Project.module.css';
 import {ProjectsType} from '../MyProjects';
+import socialNetwork from '../../assets/images/San Andreas.jpg';
 
 type PropsType = {
     projects: ProjectsType[]
 }
 
+const SocialNetwork = {
+    backgroundImage: `url(${socialNetwork})`,
+};
 const Project = (props: PropsType) => {
     const {projects} = props
     return (
@@ -13,9 +17,10 @@ const Project = (props: PropsType) => {
             {projects.map(item => {
                 return (
                     <div className={s.project} key={item.id}>
-                        <div className={s.imgContainer}>
+                        <div className={s.imgContainer} style={SocialNetwork}>
                             {/*<img alt={item.title} src={item.img} className={s.img} style={props.backgroundImage}/>*/}
-                            <div style={item.img}></div>
+                            <div style={SocialNetwork}>
+                            </div>
                             <a href={item.link}>Watch</a>
                         </div>
                         <div className={s.projectInfo}>
