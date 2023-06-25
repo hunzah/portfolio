@@ -1,4 +1,6 @@
-@import 'src/common/styles/variables/variables';
+@import '../../styles/sass/variables';
+@import '../../styles/sass/mixins';
+
 .title {
   margin: 0 0 30px;
   position: relative;
@@ -17,10 +19,7 @@
     margin: 0;
     width: 100%;
     min-height: 1px;
-    /*font-family: 'Poppins', sans-serif;*/
-    font-weight: 600;
-    font-style: normal;
-    font-size: 21px;
+    @include text(600,21px);
     padding-bottom: 7px;
     color: $textColor;
     text-transform: capitalize;
