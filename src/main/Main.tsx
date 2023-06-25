@@ -1,14 +1,18 @@
 import React from 'react';
-import s from './Main.module.css'
+import s from './Main.module.scss'
 import stylesContainer from '../common/styles/Container.module.css'
+import sanAndreas from '../assets/images/SanAndreas.jpg'
+
+
+const photo = {backgroundImage: `url(${sanAndreas})`}
 
 const Main = () => {
     return (
         <div className={s.main}>
-
-            <div className={`${stylesContainer.container} ${s.container}`}>
-                <div className={s.photo}>photo</div>
-                <div className={s.textBlock}><h1 className={s.name}>Alex Smith</h1>
+            <div className={`${s.container} ${stylesContainer.container}`}>
+                <div className={s.photoWrap} style={photo}>  </div>
+                <div className={s.textBlock}>
+                    <h1 className={s.name}>Alex Smith</h1>
                     <p className={s.text}>Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis,
                         risus
                         non condimentum

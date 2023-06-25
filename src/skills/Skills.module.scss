@@ -1,0 +1,17 @@
+.skillsBlock {
+  .skillsContainer {
+    .skills {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      @media screen and (max-width: 1129px) {
+        justify-content: center;
+      }
+    }
+
+
+  }
+
+}
+

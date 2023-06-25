@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Skills.module.css';
+import s from './Skills.module.scss';
 import stylesContainer from '../common/styles/Container.module.css';
 import {v1} from 'uuid';
 import Skill from './skiil/Skill';
