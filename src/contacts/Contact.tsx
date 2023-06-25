@@ -7,12 +7,12 @@ const Contact = () => {
     return (
         <div className={s.contact}>
             <div className={`${stylesContainer.container} ${s.contactContainer}` }>
-                <Title title={'Contacts'}/>
+                <Title title={'Contacts'}  className={s.title}/>
                 <form className={s.form}>
-                    <input type = 'text' className={s.inputs}/>
-                    <input type = 'text' className={s.inputs}/>
-                    <textarea className={s.textarea}/>
-                    <button type = 'submit' className={s.button}/>
+                    <input type = 'text' className={s.inputs} placeholder={'Name'}/>
+                    <input type = 'text' className={s.inputs} placeholder={'Email'}/>
+                    <textarea className={s.textarea} placeholder={'Your Message'}/>
+                    <button type = 'submit' className={s.button} >Send Message</button>
                 </form>
             </div>
         </div>

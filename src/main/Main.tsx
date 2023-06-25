@@ -11,9 +11,9 @@ const Main = () => {
     return (
         <div className={s.main}>
             <div className={`${s.container} ${stylesContainer.container}`}>
-                <div className={s.photoWrap} style={photo}>  </div>
+                <div className={s.photoWrap} style={photo}></div>
                 <div className={s.textBlock}>
-                    <h1 className={s.name}>Alex Smith</h1>
+                    <h1 className={s.name}>Yusup Magomedov</h1>
                     <p className={s.text}>Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis,
                         risus
                         non condimentum
@@ -22,7 +22,7 @@ const Main = () => {
                         placerat
                         sapien pretium eu.</p>
                 </div>
-
+                <DividerSpace/>
             </div>
 
         </div>
