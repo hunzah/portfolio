@@ -1,10 +1,11 @@
 import React from 'react';
 import {SkillsType} from '../Skills';
-import s from './Skill.module.css'
+import s from './Skill.module.scss'
 
 type PropsType = {
     skills: SkillsType[]
 }
+
 
 const Skill = (props: PropsType) => {
    const {skills}=props
@@ -13,10 +14,8 @@ const Skill = (props: PropsType) => {
             {skills.map(item => {
                 return (
                     <div className={s.skill} key={item.id}>
-                        <img alt={item.title} src={item.img} className={s.img}/>
-                        {/*<div className={s.img}></div>*/}
+                        <img alt={item.title} src={item.img} className={s.img} />
                         <h3 className={s.title}>{item.title}</h3>
-                        <p className={s.text}>{item.text}</p>
                     </div>
                 )
             })}
