@@ -4,7 +4,6 @@
 .title {
   margin: 0 0 30px;
   position: relative;
-  text-align: left;
   &::after {
     content: '';
     background: linear-gradient(to left, $lineColorMain 70%, $lineColor 30%);
