@@ -2,6 +2,7 @@ import React from 'react';
 import s from './Main.module.scss'
 import stylesContainer from '../common/styles/Container.module.css'
 import sanAndreas from '../assets/images/SanAndreas.jpg'
+import DividerSpace from '../common/components/dividerSpace/DividerSpace';
 
 
 const photo = {backgroundImage: `url(${sanAndreas})`}
@@ -21,6 +22,7 @@ const Main = () => {
                         placerat
                         sapien pretium eu.</p>
                 </div>
+                <DividerSpace/>
             </div>
 
         </div>

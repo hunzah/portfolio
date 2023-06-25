@@ -9,6 +9,7 @@ import ReactImg from './../assets/images/React.svg'
 import Redux from './../assets/images/ReduxV.svg'
 import JS from './../assets/images/JS.svg'
 import CSS from './../assets/images/CSS.svg'
+import DividerSpace from '../common/components/dividerSpace/DividerSpace';
 
 
 
@@ -39,6 +40,7 @@ const Skills = () => {
                     <Skill skills={skills} />
                 </div>
             </div>
+            <DividerSpace/>
         </div>
     );
 };
