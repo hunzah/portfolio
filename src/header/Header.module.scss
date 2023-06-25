@@ -23,7 +23,7 @@
 }
 
 .logo h2 {
-  color: #fff;
+  color: $headerNameColor;
   @include text(600, 20px)
 }
 
