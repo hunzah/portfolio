@@ -22,7 +22,7 @@ const Main = () => {
                         placerat
                         sapien pretium eu.</p>
                 </div>
-                <DividerSpace/>
+
             </div>
 
         </div>

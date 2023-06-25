@@ -5,6 +5,7 @@ import Project from './project/Project';
 import {v1} from 'uuid';
 import {Title} from '../common/components/title/Title';
 import SanAndreas  from '../assets/images/SanAndreas.jpg';
+import DividerSpace from '../common/components/dividerSpace/DividerSpace';
 
 export type ProjectsType = {
     id: string
@@ -32,6 +33,7 @@ const MyProjects = () => {
                     <Project projects={projects}/>
                 </div>
             </div>
+            <DividerSpace/>
         </div>
     );
 };
