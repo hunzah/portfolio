@@ -5,11 +5,11 @@
 .main .container {
   display: flex;
   justify-content: center;
+  padding: 15px 0 15px;
 
   .photoWrap {
+    margin: 0 15px 0 15px;
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
     width: 300px;
     height: 300px;
     border-radius: 1000px;
@@ -23,7 +23,7 @@
     color: $thirdTextColor;
     width: 300px;
     @include text(600, 14px);
-    padding-left: 15px;
+    padding-left: 25px;
 
     .name {
       color: $textColor;

@@ -4,7 +4,7 @@ import stylesContainer from './../common/styles/Container.module.css'
 import Project from './project/Project';
 import {v1} from 'uuid';
 import {Title} from '../common/components/title/Title';
-import socialNetwork  from '../assets/images/Redux green.svg';
+import SanAndreas  from '../assets/images/SanAndreas.jpg';
 
 export type ProjectsType = {
     id: string
@@ -16,8 +16,8 @@ export type ProjectsType = {
 
 
 const projects: ProjectsType[] = [
-    {id: v1(), img: {backgroundImage: `url(${socialNetwork})`}, link: '', title: 'Social Network', description: 'text text text text text text text text text text text text text text text text text text text text'},
-    {id: v1(), img: {backgroundImage: `url(${socialNetwork})`}, link: '', title: 'Todo List', description: 'text'},
+    {id: v1(), img: {backgroundImage: `url(${SanAndreas})`}, link: '', title: 'Social Network', description: 'text text text text text text text text text text text text text text text text text text text text'},
+    {id: v1(), img: {backgroundImage: `url(${SanAndreas})`}, link: '', title: 'Todo List', description: 'text'},
 
 ]
 
