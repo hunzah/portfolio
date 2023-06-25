@@ -1,80 +1,81 @@
 @import './src/common/styles/sass/variables';
 @import './src/common/styles/sass/mixins';
 
-.contact {
-  .contactContainer {
+
+.contactContainer {
+  flex-direction: column;
+
+  .title {
+    text-align: left;
+  }
+
+  .form {
+    width: 400px;
+    display: flex;
     flex-direction: column;
-    .title {
+    align-items: center;
+
+    input,
+    textarea {
+      @include text(400, 12px);
+      width: 100%;
+      background-color: $lineColorMain;
+      color: $textColor;
+      padding: 5px;
+      border: 1px solid $secondColor;
+      margin-bottom: 10px;
+      max-width: 100%;
+      min-width: 100%;
+
+      &::placeholder {
+        color: $secondColor;
+      }
     }
 
-    .form {
-      width: 400px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    textarea {
+      height: 100px;
+    }
 
-      input,
-      textarea {
-        @include text(400, 12px);
+    .button {
+      @include text(400, 14px);
+      width: 100%;
+      max-width: 170px;
+      height: 30px;
+      background-color: transparent;
+      color: $footerLinksColor;
+      border: none;
+      cursor: pointer;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        height: 5px;
         width: 100%;
-        background-color: $lineColorMain;
+        background-color: $lineColor;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0.3);
+      }
+
+      &:hover {
+        background-color: $lineColor;
+        transition-delay: 0.3s;
         color: $textColor;
-        padding: 5px;
-        border: 1px solid $secondColor;
-        margin-bottom: 10px;
-        max-width: 100%;
-        min-width: 100%;
-
-        &::placeholder {
-          color: $secondColor;
-        }
-      }
-
-      textarea {
-        height: 100px;
-      }
-
-      .button {
-        @include text(400, 14px);
-        width: 100%;
-        max-width: 170px;
-        height: 30px;
-        background-color: transparent;
-        color: $footerLinksColor;
-        border: none;
-        cursor: pointer;
-        position: relative;
 
         &::after {
-          content: "";
-          display: block;
-          height: 5px;
-          width: 100%;
-          background-color: $lineColor;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          transform: scaleX(0.3);
+          transform: scaleX(1);
+          transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
         }
+      }
 
-        &:hover {
-          background-color: $lineColor;
-          transition-delay: 0.3s;
-          color: $textColor;
+      &:focus {
+        outline: none;
+      }
 
-          &::after {
-            transform: scaleX(1);
-            transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
-          }
-        }
-
-        &:focus {
-          outline: none;
-        }
-
-        &:active {
-          transform: translateY(1px);
-        }
+      &:active {
+        transform: translateY(1px);
       }
     }
   }

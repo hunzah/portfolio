@@ -5,9 +5,8 @@ import {Title} from '../common/components/title/Title';
 
 const Contact = () => {
     return (
-        <div className={s.contact}>
             <div className={`${stylesContainer.container} ${s.contactContainer}` }>
-                <Title title={'Contacts'}  className={s.title}/>
+                <Title title={'Contact'}  className={s.title}/>
                 <form className={s.form}>
                     <input type = 'text' className={s.inputs} placeholder={'Name'}/>
                     <input type = 'text' className={s.inputs} placeholder={'Email'}/>
@@ -15,7 +14,6 @@ const Contact = () => {
                     <button type = 'submit' className={s.button} >Send Message</button>
                 </form>
             </div>
-        </div>
     );
 };
 
