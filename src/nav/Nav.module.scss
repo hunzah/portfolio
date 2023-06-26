@@ -1,18 +1,71 @@
 @import './src/common/styles/sass/variables';
 @import './src/common/styles/sass/mixins';
 
-.nav {
-  width: 300px;
+.container {
+  border: 1px white solid;
+  width: 60%;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
-
   align-items: center;
-
-
+  justify-content: flex-end;
 }
 
-.nav a {
+//.nav {
+//  //position: fixed;
+//  //top: 0;
+//  right: 0;
+//  z-index: 50;
+//  //display: flex;
+//  //justify-content: space-between;
+//  //border: #007ced 1px solid;
+//}
+
+.navList a {
   @include text(600, 14px);
   color: $secondTextColor;
   text-decoration: none;
 }
+
+.navList li {
+  display: inline-block;
+  margin: 0;
+  padding-right: 50px;
+}
+
+.burgerIcon {
+  display: none;
+
+}
+//
+//@media screen and (max-width: 798px) {
+//  .nav {
+//    justify-content: center;
+//
+//    .burgerIcon {
+//      display: block;
+//
+//    }
+//  }
+//  .navList li {
+//    display: none;
+//
+//  }
+//  .navListMobile {
+//    .navListMobile li {
+//      display: block;
+//      box-sizing: border-box;
+//      margin: 0;
+//      padding: 0;
+//      text-decoration: none;
+//      font-size: 18px;
+//      color: black;
+//
+//    }
+//
+//    .navListMobile a {
+//      text-decoration: none;
+//      @include text(600, 14px);
+//      color: $secondTextColor;
+//    }
+//  }
+//}

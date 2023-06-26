@@ -7,12 +7,12 @@
 }
 
 @mixin darkTheme {
-    background-color: $backColor;
-    color: $textColor;
+    background-color:black;
+    color:white;
 }
 @mixin lightTheme {
-    background-color: $backColor;
-      color:  $textColor;
+      background-color:white;
+      color:  black
 }
 
 body.light {

@@ -13,7 +13,6 @@ const Header = (props:PropsType) => {
         <div className={`${stylesContainer} ${s.header}`}>
             <div className={s.logo}>
                 {props.isDarkMode ? <img alt={'logo'} src={logoLight}/>: <img alt={'logo'} src={logo}/>}
-
                 <h2>Yusup <span className={s.lastName}>Magomedov</span></h2>
             </div>
             <Nav/>
