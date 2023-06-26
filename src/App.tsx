@@ -6,8 +6,7 @@ import Skills from './skills/Skills';
 import MyProjects from './my projects/MyProjects';
 import Contact from './contacts/Contact';
 import Footer from './footer/Footer';
-import './common/styles/sass/darkTheme.scss';
-import './common/styles/sass/lightTheme.scss';
+
 
 function App() {
     const [isDarkMode, setIsDarkMode] = useState(false);

@@ -59,3 +59,16 @@ $thirdColor: map-get($lightThemeColors, thirdColor);
 $lineColorMain: map-get($lightThemeColors, lineColorMain);
 $lineColor: map-get($lightThemeColors, lineColor);
 $photoBorderColor: map-get($lightThemeColors, photoBorderColor);
+
+@mixin darkTheme {
+  body {
+    background-color: $backColor;
+    color: $textColor;
+  }
+}
+@mixin lightTheme {
+  body {
+    background-color: $backColor;
+    color: $textColor;
+  }
+}
