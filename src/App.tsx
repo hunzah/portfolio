@@ -20,7 +20,13 @@ function App() {
             body.classList.add(s.light);
             body.classList.remove(s.dark);
         }
+        try {
+            localStorage.setItem('isDarkMode', JSON.stringify(isDarkMode));
+        } catch (err) {
+            console.error('Error saving to localStorage:', err);
+        }
     }, [isDarkMode]);
+
 
     const toggleDarkMode = () => {
         setIsDarkMode(!isDarkMode);
