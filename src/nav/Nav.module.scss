@@ -5,14 +5,84 @@
   width: 300px;
   display: flex;
   justify-content: space-between;
-  /*gap: 10px;*/
   align-items: center;
 
-
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
 }
 
 .nav a {
   @include text(600, 14px);
   color: $secondTextColor;
   text-decoration: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.burger {
+  @include text(600, 14px);
+  color: $secondTextColor;
+  text-decoration: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.burger__icon {
+  width: 20px;
+  height: 20px;
+  background-color: $secondTextColor;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: $secondTextColor;
+    position: absolute;
+    left: 0;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+.navList {
+  display: flex;
+
+  @media (max-width: 768px) {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: $backColor;
+    padding: 20px;
+  }
+}
+
+.navListMobile {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 }
