@@ -1,10 +1,18 @@
 @import "./common/styles/sass/variables";
-@import "./common/styles/sass/darkTheme";
-@import "./common/styles/sass/lightTheme";
+
 
 .App {
     padding-top: 40px;
     position: relative;
+}
+
+@mixin darkTheme {
+    background-color: $backColor;
+    color: $textColor;
+}
+@mixin lightTheme {
+    background-color: $backColor;
+      color:  $textColor;
 }
 
 body.light {

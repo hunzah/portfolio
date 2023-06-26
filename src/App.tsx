@@ -9,7 +9,7 @@ import Footer from './footer/Footer';
 
 
 function App() {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(true);
 
     useEffect(() => {
         const body = document.getElementsByTagName('body')[0];
@@ -31,9 +31,9 @@ function App() {
             <button className={s.toggleTheme} onClick={toggleDarkMode}>
                 {isDarkMode ? 'Light mode' : 'Dark mode'}
             </button>
-            <Header />
+            <Header isDarkMode={isDarkMode} />
             <Main />
-            <Skills />
+            <Skills isDarkMode={isDarkMode}/>
             <MyProjects />
             <Contact />
             <Footer />

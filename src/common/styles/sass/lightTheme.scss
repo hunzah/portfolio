@@ -1,9 +1,0 @@
-@import "./variables";
-
-
-@mixin lightTheme {
-  body {
-    background-color: $backColor;
-    color: $textColor;
-  }
-}
