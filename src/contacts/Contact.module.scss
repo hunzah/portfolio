@@ -79,4 +79,37 @@
       }
     }
   }
+  @media screen and (max-width: 480px) {
+    .form {
+      width: 100%;
+      padding: 0 20px;
+
+      input,
+      textarea {
+        @include text(400, 10px);
+        padding: 3px;
+        margin-bottom: 5px;
+
+        &::placeholder {
+          font-size: 10px;
+        }
+      }
+
+      textarea {
+        height: 80px;
+      }
+
+      .button {
+        @include text(400, 12px);
+        width: 100%;
+        max-width: 150px;
+        height: 25px;
+
+        &::after {
+          height: 3px;
+        }
+      }
+    }
+  }
 }
+

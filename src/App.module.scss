@@ -6,22 +6,23 @@
     position: relative;
 }
 
-@mixin darkTheme {
-    background-color:black;
-    color:white;
-}
-@mixin lightTheme {
-      background-color:white;
-      color:  black
-}
+//@mixin darkTheme {
+//    background-color:black;
+//    color:white;
+//}
+//@mixin lightTheme {
+//      background-color:white;
+//      color:  black
+//}
 
-body.light {
-    @include lightTheme;
-}
-
-body.dark {
-    @include darkTheme;
-}
+//body.light {
+//    background-color:white;
+//    color:  black
+//}
+//
+//body.dark {
+//    @include darkTheme;
+//}
 
 .toggleTheme {
     position: fixed;

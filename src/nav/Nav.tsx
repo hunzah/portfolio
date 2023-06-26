@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import s from './Nav.module.scss'
 import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import c from './../common/styles/Container.module.css'
 
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

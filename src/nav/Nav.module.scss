@@ -6,19 +6,10 @@
   width: 60%;
   height: 100%;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: flex-end;
 }
-
-//.nav {
-//  //position: fixed;
-//  //top: 0;
-//  right: 0;
-//  z-index: 50;
-//  //display: flex;
-//  //justify-content: space-between;
-//  //border: #007ced 1px solid;
-//}
 
 .navList a {
   @include text(600, 14px);
@@ -29,43 +20,47 @@
 .navList li {
   display: inline-block;
   margin: 0;
-  padding-right: 50px;
+  padding-right: 5vw;
 }
 
 .burgerIcon {
   display: none;
 
 }
-//
-//@media screen and (max-width: 798px) {
-//  .nav {
-//    justify-content: center;
-//
-//    .burgerIcon {
-//      display: block;
-//
-//    }
-//  }
-//  .navList li {
-//    display: none;
-//
-//  }
-//  .navListMobile {
-//    .navListMobile li {
-//      display: block;
-//      box-sizing: border-box;
-//      margin: 0;
-//      padding: 0;
-//      text-decoration: none;
-//      font-size: 18px;
-//      color: black;
-//
-//    }
-//
-//    .navListMobile a {
-//      text-decoration: none;
-//      @include text(600, 14px);
-//      color: $secondTextColor;
-//    }
-//  }
+
+@media screen and (max-width: 768px) {
+  .container {
+    justify-content: center;
+    width: 3vw;
+
+    .burgerIcon {
+      display: block;
+
+    }
+  }
+  .navList li {
+    display: none;
+
+  }
+
+}
+
+
+//.navListMobile li {
+//  position: absolute;
+//  top: 0;
+//  right: 0;
+//  display: flex;
+//  flex-direction: column;
+//  box-sizing: border-box;
+//  text-decoration: none;
+//  z-index: 999; /* устанавливаем высокий индекс для элементов */
 //}
+//
+//.navListMobile a {
+//  text-decoration: none;
+//  @include text(600, 14px);
+//  color: $secondTextColor;
+//  margin-bottom: 10px; /* добавляем отступ между элементами */
+//}
+
