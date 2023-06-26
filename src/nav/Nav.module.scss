@@ -5,6 +5,7 @@
   width: 300px;
   display: flex;
   justify-content: space-between;
+
   align-items: center;
 
 
@@ -14,30 +15,4 @@
   @include text(600, 14px);
   color: $secondTextColor;
   text-decoration: none;
-}
-@keyframes slideIn {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.navList {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navListMobile {
-  animation: slideIn 0.3s ease-in-out forwards;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: $backColor;
-  padding: 20px;
-  z-index: 1;
 }
