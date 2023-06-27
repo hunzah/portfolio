@@ -1,3 +1,22 @@
+
+
+//
+//$lightThemeColors: (
+//        textColor: #333,
+//        headerNameColor: #222,
+//        secondTextColor: #333,
+//        thirdTextColor: #666,
+//        projTitlesColor: #333,
+//        footerLinksColor: #333,
+//        backColor: #FFF,
+//        footerBackColor: #fcfcfc,
+//        secondColor: #aaa,
+//        thirdColor: #d5d5d5,
+//        lineColorMain: #eee,
+//        lineColor: #54ca95,
+//        photoBorderColor: #FFF
+//);
+
 $darkThemeColors: (
         textColor: #f5f5f5,
         headerNameColor: #fff,
@@ -13,7 +32,6 @@ $darkThemeColors: (
         lineColor: #007ced,
         photoBorderColor: #444
 );
-
 $textColor: map-get($darkThemeColors, textColor);
 $headerNameColor: map-get($darkThemeColors, headerNameColor);
 $secondTextColor: map-get($darkThemeColors, secondTextColor);
@@ -30,32 +48,20 @@ $photoBorderColor: map-get($darkThemeColors, photoBorderColor);
 
 
 
-$lightThemeColors: (
-        textColor: #333,
-        headerNameColor: #222,
-        secondTextColor: #333,
-        thirdTextColor: #666,
-        projTitlesColor: #333,
-        footerLinksColor: #333,
-        backColor: #FFF,
-        footerBackColor: #fcfcfc,
-        secondColor: #aaa,
-        thirdColor: #d5d5d5,
-        lineColorMain: #eee,
-        lineColor: #54ca95,
-        photoBorderColor: #FFF
-);
 
-$textColor: map-get($lightThemeColors, textColor);
-$headerNameColor: map-get($lightThemeColors, headerNameColor);
-$secondTextColor: map-get($lightThemeColors, secondTextColor);
-$thirdTextColor: map-get($lightThemeColors, thirdTextColor);
-$projTitlesColor: map-get($lightThemeColors, projTitlesColor);
-$footerLinksColor: map-get($lightThemeColors, footerLinksColor);
-$backColor: map-get($lightThemeColors, backColor);
-$footerBackColor: map-get($lightThemeColors, footerBackColor);
-$secondColor: map-get($lightThemeColors, secondColor);
-$thirdColor: map-get($lightThemeColors, thirdColor);
-$lineColorMain: map-get($lightThemeColors, lineColorMain);
-$lineColor: map-get($lightThemeColors, lineColor);
-$photoBorderColor: map-get($lightThemeColors, photoBorderColor);
+
+//$textColor: map-get($lightThemeColors, textColor);
+//$headerNameColor: map-get($lightThemeColors, headerNameColor);
+//$secondTextColor: map-get($lightThemeColors, secondTextColor);
+//$thirdTextColor: map-get($lightThemeColors, thirdTextColor);
+//$projTitlesColor: map-get($lightThemeColors, projTitlesColor);
+//$footerLinksColor: map-get($lightThemeColors, footerLinksColor);
+//$backColor: map-get($lightThemeColors, backColor);
+//$footerBackColor: map-get($lightThemeColors, footerBackColor);
+//$secondColor: map-get($lightThemeColors, secondColor);
+//$thirdColor: map-get($lightThemeColors, thirdColor);
+//$lineColorMain: map-get($lightThemeColors, lineColorMain);
+//$lineColor: map-get($lightThemeColors, lineColor);
+//$photoBorderColor: map-get($lightThemeColors, photoBorderColor);
+//
+

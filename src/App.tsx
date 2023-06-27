@@ -35,7 +35,7 @@ function App() {
     return (
         <div className={s.App}>
             <button className={s.toggleTheme} onClick={toggleDarkMode}>
-                {isDarkMode ? 'Light mode' : 'Dark mode'}
+                {isDarkMode ? 'Dark mode'  :  'Light mode'}
             </button>
             <Header isDarkMode={isDarkMode} />
             <Main />
