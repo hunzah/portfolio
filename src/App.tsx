@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import s from './App.module.scss';
 import Header from './header/Header';
 import Main from './main/Main';
@@ -35,14 +35,14 @@ function App() {
     return (
         <div className={s.App}>
             <button className={s.toggleTheme} onClick={toggleDarkMode}>
-                {isDarkMode ? 'Dark mode'  :  'Light mode'}
+                {isDarkMode ? 'Dark mode' : 'Light mode'}
             </button>
-            <Header isDarkMode={isDarkMode} />
-            <Main />
+            <Header isDarkMode={isDarkMode}/>
+            <Main/>
             <Skills isDarkMode={isDarkMode}/>
-            <MyProjects />
-            <Contact />
-            <Footer />
+            <MyProjects/>
+            <Contact/>
+            <Footer/>
         </div>
     );
 }

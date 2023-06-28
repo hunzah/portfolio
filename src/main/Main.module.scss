@@ -7,6 +7,7 @@
   justify-content: center;
   padding: 65px 0 15px;
   line-height: 1.75em;
+
   .photoWrap {
     margin: 0 15px 0 15px;
     min-height: 1px;
@@ -25,6 +26,7 @@
   .photoWrap:hover {
     background-position: calc(50% + 10px) calc(50% + 3.47835px);
   }
+
   .textBlock {
     color: $thirdTextColor;
     width: 500px;
