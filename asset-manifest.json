@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/resume/static/css/main.a58674ed.css",
-    "main.js": "/resume/static/js/main.2fe8d70f.js",
+    "main.css": "/resume/static/css/main.d55e5e70.css",
+    "main.js": "/resume/static/js/main.bfd520da.js",
     "static/js/787.28cb0dcd.chunk.js": "/resume/static/js/787.28cb0dcd.chunk.js",
     "static/media/SanAndreas.jpg": "/resume/static/media/SanAndreas.a7e20f4ecc69bcd82564.jpg",
     "static/media/TS.svg": "/resume/static/media/TS.5b37a368923edf7b37f951bd7d611983.svg",
@@ -17,12 +17,12 @@
     "index.html": "/resume/index.html",
     "static/media/CSS.svg": "/resume/static/media/CSS.c8b6c619a83ca98b374ccb07a8893b5f.svg",
     "static/media/CSSLight.svg": "/resume/static/media/CSSLight.3427c947c08820a6618fbf57ab001d78.svg",
-    "main.a58674ed.css.map": "/resume/static/css/main.a58674ed.css.map",
-    "main.2fe8d70f.js.map": "/resume/static/js/main.2fe8d70f.js.map",
+    "main.d55e5e70.css.map": "/resume/static/css/main.d55e5e70.css.map",
+    "main.bfd520da.js.map": "/resume/static/js/main.bfd520da.js.map",
     "787.28cb0dcd.chunk.js.map": "/resume/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a58674ed.css",
-    "static/js/main.2fe8d70f.js"
+    "static/css/main.d55e5e70.css",
+    "static/js/main.bfd520da.js"
   ]
 }
