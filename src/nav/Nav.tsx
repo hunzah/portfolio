@@ -14,7 +14,7 @@ const Nav = () => {
         <div className={s.container}>
             <div className={s.nav}>
                 <div className={`${s.burger}`} onClick={toggleMenu}>
-                    <FontAwesomeIcon className={s.burgerIcon} icon={faBars}/>
+                    <FontAwesomeIcon className={s.burgerIcon} icon={faBars} size="2xl" />
                     <span></span>
                 </div>
                 <ul className={`${isMenuOpen ? s.navListMobile : s.navList}`}>
