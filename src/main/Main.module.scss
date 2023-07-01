@@ -36,14 +36,25 @@
     .name {
       line-height: 1.75em;
       color: $textColor;
-      @include text(600, 36px);
+      @include text(600, 48px);
 
     }
   }
 
 }
 
+@media screen and (max-width: 768px) {
+  .main .container .textBlock .name {
+    @include text(600, 36px);
+  }
+  .main .container .photoWrap  {
+    width: 50vw;
+    height: 50vw;
+  }
+}
 
-
-
-
+@media screen and (max-width: 480px) {
+  .main .container .textBlock .name {
+    @include text(600, 26px);
+  }
+}
