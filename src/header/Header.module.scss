@@ -32,7 +32,6 @@
 
 @media screen and (max-width: 768px) {
   .header {
-    //padding: 0 20px 50px 25px;
     position: fixed;
     top: 0;
     left: 0;
@@ -41,12 +40,21 @@
     padding: 20px;
     background-color: $backColor;
     box-shadow: 2px 1px 10px $headerLineColor;
-    height: 70px;
+    height: 50px;
   }
   .logo img {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
 
+
+  }
+  .logo h2 {
+    color: $headerNameColor;
+    @include text(600, 18px)
+  }
+
+  .lastName {
+    @include text(400, 18px)
   }
 
 }

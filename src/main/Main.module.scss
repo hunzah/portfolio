@@ -12,8 +12,6 @@
     margin: 0 15px 0 15px;
     min-height: 1px;
     width: 30vw;
-    //max-width:400px;
-    //max-height:400px;
     height: 30vw;
     border-radius: 1000px;
     background-color: $photoBorderColor;
@@ -31,13 +29,12 @@
     color: $thirdTextColor;
     width: 500px;
     @include text(600, 14px);
-    padding-left: 25px;
+
 
     .name {
       line-height: 1.75em;
       color: $textColor;
       @include text(600, 48px);
-
     }
   }
 
@@ -48,6 +45,7 @@
   .main .container .textBlock .name {
     @include text(600, 36px);
     text-align: center;
+    padding: 15px 0;
   }
   .main .container .photoWrap  {
     width: 50vw;
@@ -58,6 +56,5 @@
 @media screen and (max-width: 480px) {
   .main .container .textBlock .name {
     @include text(600, 26px);
-
   }
 }
