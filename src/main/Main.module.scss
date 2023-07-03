@@ -44,8 +44,10 @@
 }
 
 @media screen and (max-width: 768px) {
+
   .main .container .textBlock .name {
     @include text(600, 36px);
+    text-align: center;
   }
   .main .container .photoWrap  {
     width: 50vw;
@@ -56,5 +58,6 @@
 @media screen and (max-width: 480px) {
   .main .container .textBlock .name {
     @include text(600, 26px);
+
   }
 }

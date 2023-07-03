@@ -2,7 +2,6 @@
 @import './src/common/styles/sass/variables.scss';
 
 .header {
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,18 +32,16 @@
 
 @media screen and (max-width: 768px) {
   .header {
-    padding: 0 20px 50px 25px;
-    &::after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 1px;
-      box-shadow: 0 3px 4px $headerLineColor;
-      position: absolute;
-      top: 65px;
-      left: 0;
-      z-index: 1;
-    }
+    //padding: 0 20px 50px 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 20px;
+    background-color: $backColor;
+    box-shadow: 2px 1px 10px $headerLineColor;
+    height: 70px;
   }
   .logo img {
     width: 40px;
