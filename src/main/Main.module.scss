@@ -9,8 +9,7 @@
   line-height: 1.75em;
 
   .photoWrap {
-    margin: 0 15px 0 15px;
-    min-height: 1px;
+    margin: 0 25px ;
     width: 30vw;
     height: 30vw;
     border-radius: 1000px;
@@ -29,6 +28,7 @@
     color: $thirdTextColor;
     width: 500px;
     @include text(600, 14px);
+    text-align: justify;
 
 
     .name {
@@ -40,8 +40,7 @@
 
 }
 
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 920px) {
   .main .container .textBlock .name {
     @include text(600, 36px);
     text-align: center;
