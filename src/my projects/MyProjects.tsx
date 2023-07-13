@@ -18,7 +18,7 @@ export type ProjectsType = {
 
 const projects: ProjectsType[] = [
     {id: v1(), img: {backgroundImage: `url(${SanAndreas})`}, link: '', title: 'Social Network', description: 'text text text text text text text text text text text text text text text text text text text text'},
-    {id: v1(), img: {backgroundImage: `url(${SanAndreas})`}, link: '', title: 'Todo List', description: 'text'},
+    {id: v1(), img: {backgroundImage: `url(${SanAndreas})`}, link: 'https://hunzah.github.io/Todo-List', title: 'Todo List', description: 'text'},
 
 ]
 
