@@ -12,8 +12,8 @@ export type ProjectsType = {
     img: { backgroundImage: string }
     link: string
     title: string
-    description: string
-    stack: string
+    description?: string
+    stack?: string
 }
 
 
@@ -25,10 +25,8 @@ const projects: ProjectsType[] = [
     Stack: TypeScript, React ReduxToolkit, MaterialUI.`
     },
     {
-        id: v1(), img: {backgroundImage: `url(${SanAndreas})`}, link: 'https://hunzah.github.io/Todo-List',
-        title: 'Todo List', description: `This project is a todo list created as a personal project, 
-        designed for easy tracking of tasks or items that need to be completed.`, stack: `
-    Stack: TypeScript, React ReduxToolkit, MaterialUI.`
+        id: v1(), img: {backgroundImage: `url(${SanAndreas})`}, link: 'https://hunzah.github.io/counter',
+        title: 'Counter',
     },
     {
         id: v1(), img: {backgroundImage: `url(${SanAndreas})`}, link: '', title: 'Social Network',
