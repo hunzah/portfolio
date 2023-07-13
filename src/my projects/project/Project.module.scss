@@ -24,13 +24,13 @@
   }
 
   .projectInfo {
-    padding: 25px 20px;
+    padding: 25px 0;
 
     .title {
 
       @include text(600, 16px);
 
-      margin: 0 0 5px;
+      //margin: 0 0 5px;
       color: $projTitlesColor;
 
     }
@@ -39,6 +39,11 @@
       @include text(400, 12px);
 
       color: $thirdTextColor;
+      .stack {
+        @include text(600, 12px);
+        //text-align: center;
+        //color:$lineColor
+      }
     }
   }
 }
