@@ -1,72 +1,67 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import s from './Contact.module.scss';
 import stylesContainer from './../common/styles/Container.module.css';
-import { Title } from '../common/components/title/Title';
+import {Title} from '../common/components/title/Title';
+import {useFormik} from 'formik';
 import * as Yup from 'yup';
-import {Field, Form, Formik} from 'formik';
-
-interface FormValues {
-    name: string
-    email: string
-    message: string
-}
 
 const Contact = () => {
-    const initialValues:FormValues = {
-        name: '',
-        email: '',
-        message: ''
-    };
+    const formik = useFormik({
+        initialValues: {
+            name: '',
+            email: '',
+            message: '',
+        },
+        validationSchema: Yup.object({
+            name: Yup.string()
+                .max(15, 'Must be 15 characters or less')
+                .required('Required'),
+            email: Yup.string()
+                .email('Invalid email address')
+                .required('Required'),
+            message: Yup.string()
+                .min(15, 'Must be at least 15 characters')
+                .required('Required')
+        }),
+        onSubmit: values => {
+            alert(JSON.stringify(values, null, 2))
+        }
+    })
+    const [isDisabled, setIsDisabled] = useState(false);
 
-    const validationSchema = Yup.object({
-        name: Yup.string()
-            .max(15, 'Must be 15 characters or less')
-            .required('Required'),
-        email: Yup.string()
-            .email('Invalid email address')
-            .required('Required'),
-        message: Yup.string()
-            .min(10, 'Must be at least 10 characters')
-            .required('Required')
-    });
 
-    const onSubmit = (values:FormValues, { setSubmitting, resetForm }:any) => {
-        setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            resetForm();
-            setSubmitting(false);
-        }, 400);
-    };
+    useEffect(() => {
+        setIsDisabled(!!Object.keys(formik.errors).length);
+    }, [formik.errors]);
+
 
     return (
         <div className={`${stylesContainer.container} ${s.contactContainer}`}>
-            <Title title={'Contact'} className={s.title} />
-            <Formik
-                initialValues={initialValues}
-                validationSchema={validationSchema}
-                onSubmit={onSubmit}
-            >
-                {({ isSubmitting }) => (
-                    <Form className={s.form}>
-                        <Field type="text" className={s.inputs} placeholder="Name" name="name" />
+            <Title title={'Contact'} className={s.title}/>
+            <form className={s.form} action="https://formspree.io/f/xnqkqyjz" method="POST" onSubmit={formik.handleSubmit}>
+                <input type="text" className={s.inputs} placeholder={'Name'} name="name"
+                       value={formik.values.name} onChange={formik.handleChange} onBlur={formik.handleBlur}/>
 
+                {formik.errors.name && formik.touched.name ? <div className={s.error}>{formik.errors.name}</div> : null}
 
-                        <Field type="email" className={s.inputs} placeholder="Email" name="email" />
-                        {/*<ErrorMessage name="email" />*/}
+                <input type="text" className={s.inputs} placeholder={'Email'} name="email"
+                       value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur}/>
 
-                        <Field
-                            as="textarea"
-                            className={s.textarea}
-                            placeholder="Your Message"
-                            name="message"
-                        />
-                        {/*<ErrorMessage name="message" />*/}
-                        <button type="submit" className={s.button} disabled={isSubmitting}>
-                            {isSubmitting ? 'Submitting...' : 'Send Message'}
-                        </button>
-                    </Form>
-                )}
-            </Formik>
+                {formik.errors.email && formik.touched.email ?
+                    <div className={s.error}>{formik.errors.email}</div> : null}
+
+                <textarea className={s.textarea} placeholder={'Your Message'} name="message"
+                          value={formik.values.message} onChange={formik.handleChange} onBlur={formik.handleBlur}/>
+
+                {formik.errors.message && formik.touched.message ?
+                    <div className={s.error}>{formik.errors.message}</div> : null}
+
+                <button disabled={!!formik.errors || formik.isSubmitting} type="submit"
+                        className={`${s.button} ${isDisabled ? s.disable : ''}`}
+                        onClick={formik.handleSubmit}>
+                    Send Message
+                </button>
+            </form>
         </div>
     );
 };

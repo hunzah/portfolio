@@ -14,14 +14,14 @@ const Project = (props: PropsType) => {
         <>
             {projects.map(item => {
                 return (
-                    <div className={s.project} >
+                    <div key={item.id} className={s.project} >
                         <a className={s.imgContainer} style={item.img} href={item.link} target="_blank">
                             {/*<div className={s.link} ></div>*/}
                         </a>
 
                         <div className={s.projectInfo}>
                             <h3 className={s.title}>{item.title}</h3>
-                            <p className={s.description}>{item.description} <p className={s.stack}>{item.stack}</p></p>
+                            <p className={s.description}>{item.description} <span className={s.stack}>{item.stack}</span></p>
                         </div>
                     </div>
                 )
