@@ -14,14 +14,17 @@
     height: 30vw;
     border-radius: 1000px;
     background-color: $photoBorderColor;
+    background-size: 100%;
+    background-position: center;
     border: 18px solid $photoBorderColor;
     -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, .8);
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, .8);
+    transition: background-position 0.2s ease-out;
 
   }
 
   .photoWrap:hover {
-    background-position: calc(50% + 10px) calc(50% + 3.47835px);
+    background-position: calc(50% + 10px) calc(50% + 10px);
   }
 
   .textBlock {
