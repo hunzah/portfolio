@@ -4,8 +4,13 @@ import stylesContainer from './../common/styles/Container.module.css';
 import {Title} from '../common/components/title/Title';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
+import {toast, ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Contact = () => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const formik = useFormik({
         initialValues: {
             name: '',
@@ -21,14 +26,37 @@ const Contact = () => {
                 .required('Required'),
             message: Yup.string()
                 .min(15, 'Must be at least 15 characters')
-                .required('Required')
+                .required('Required'),
         }),
-        onSubmit: values => {
-            alert(JSON.stringify(values, null, 2))
-        }
-    })
-    const [isDisabled, setIsDisabled] = useState(false);
+        onSubmit: async (values, {resetForm}) => {
+            setIsSubmitting(true);
 
+            try {
+                const response = await fetch('https://formspree.io/f/xnqkqyjz', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(values),
+                });
+                    toast.success('🙌 Your Message has been sent', {
+                        draggable: true,
+                        progress: undefined,
+                        theme: 'colored',
+                    });
+            } catch (error) {
+                toast.error('😲 Failed to send message. Please retry or contact me on Telegram', {
+                    draggable: true,
+                    progress: undefined,
+                    theme: 'colored',
+                });
+            } finally {
+                setIsSubmitting(false);
+            }
+
+        },
+    });
+    const [isDisabled, setIsDisabled] = useState(false);
 
     useEffect(() => {
         setIsDisabled(!!Object.keys(formik.errors).length);
@@ -37,33 +65,72 @@ const Contact = () => {
 
     return (
         <div className={`${stylesContainer.container} ${s.contactContainer}`}>
+            <ToastContainer
+                position="bottom-left"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+
+            />
             <Title title={'Contact'} className={s.title}/>
-            <form className={s.form} action="https://formspree.io/f/xnqkqyjz" method="POST" onSubmit={formik.handleSubmit}>
-                <input type="text" className={s.inputs} placeholder={'Name'} name="name"
-                       value={formik.values.name} onChange={formik.handleChange} onBlur={formik.handleBlur}/>
+            <form className={s.form} onSubmit={formik.handleSubmit}>
+                <label htmlFor="name"></label>
+                <input
+                    className={s.inputs}
+                    placeholder="Name"
+                    id="name"
+                    name="name"
+                    type="text"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.name}
+                />
 
-                {formik.errors.name && formik.touched.name ? <div className={s.error}>{formik.errors.name}</div> : null}
+                {formik.errors.name && formik.touched.name ?
+                    <div className={s.error}>{formik.errors.name}</div>
+                    : null}
 
-                <input type="text" className={s.inputs} placeholder={'Email'} name="email"
-                       value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur}/>
+                <label htmlFor="email"></label>
+                <input
+                    className={s.inputs}
+                    placeholder="Email"
+                    id="email"
+                    name="email"
+                    type="email"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.email}
+                />
+                {formik.touched.email && formik.errors.email ? (
+                    <div className={s.error}>{formik.errors.email}</div>
+                ) : null}
 
-                {formik.errors.email && formik.touched.email ?
-                    <div className={s.error}>{formik.errors.email}</div> : null}
+                <label htmlFor="message"></label>
+                <textarea
+                    className={s.textarea}
+                    placeholder="Your Message"
+                    id="message"
+                    name="message"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.message}
+                />
+                {formik.touched.message && formik.errors.message ? (
+                    <div className={s.error}>{formik.errors.message}</div>
+                ) : null}
 
-                <textarea className={s.textarea} placeholder={'Your Message'} name="message"
-                          value={formik.values.message} onChange={formik.handleChange} onBlur={formik.handleBlur}/>
 
-                {formik.errors.message && formik.touched.message ?
-                    <div className={s.error}>{formik.errors.message}</div> : null}
-
-                <button disabled={!!formik.errors || formik.isSubmitting} type="submit"
-                        className={`${s.button} ${isDisabled ? s.disable : ''}`}
-                        onClick={formik.handleSubmit}>
-                    Send Message
+                <button disabled={isDisabled || formik.isSubmitting} type="submit"
+                        className={`${s.button} ${isDisabled ? s.disable : ''}`}>
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
+
             </form>
+
         </div>
     );
 };
-
 export default Contact;
