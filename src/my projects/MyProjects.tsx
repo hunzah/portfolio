@@ -26,13 +26,13 @@ const projects: ProjectsType[] = [
     },
     {
         id: v1(), img: {backgroundImage: `url(${SanAndreas})`}, link: 'https://hunzah.github.io/counter',
-        title: 'Counter',
+        title: 'Counter',stack: `Stack: TypeScript, React, Redux.`
     },
     {
         id: v1(), img: {backgroundImage: `url(${SanAndreas})`},
         link: 'https://hunzah.github.io/React-TS-Project-Social-Network', title: 'Social Network',
         description: 'Social Network',
-        stack: `Stack: TypeScript, React, Class Components Redux, ReduxForm.`
+        stack: `Stack: TypeScript, React based on class components. Class Components Redux, ReduxForm.`
     },
     {
         id: v1(), img: {backgroundImage: `url(${SanAndreas})`},
