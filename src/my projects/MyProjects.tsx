@@ -21,16 +21,18 @@ const projects: ProjectsType[] = [
     {
         id: v1(), img: {backgroundImage: `url(${SanAndreas})`}, link: 'https://hunzah.github.io/Todo-List',
         title: 'Todo List', description: `This project is a todo list created as a personal project, 
-        designed for easy tracking of tasks or items that need to be completed.`, stack: `
-    Stack: TypeScript, React ReduxToolkit, MaterialUI, StoryBook.`
+        designed for easy tracking of tasks or items that need to be completed.`,
+        stack: `Stack: TypeScript, React ReduxToolkit, MaterialUI, StoryBook.`
     },
     {
         id: v1(), img: {backgroundImage: `url(${SanAndreas})`}, link: 'https://hunzah.github.io/counter',
         title: 'Counter',
     },
     {
-        id: v1(), img: {backgroundImage: `url(${SanAndreas})`}, link: '', title: 'Social Network',
-        description: 'text', stack: ''
+        id: v1(), img: {backgroundImage: `url(${SanAndreas})`},
+        link: 'https://hunzah.github.io/React-TS-Project-Social-Network', title: 'Social Network',
+        description: 'Social Network',
+        stack: `Stack: TypeScript, React, Class Components Redux, ReduxForm.`
     },
 ]
 
