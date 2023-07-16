@@ -21,7 +21,7 @@ const Project = (props: PropsType) => {
 
                         <div className={s.projectInfo}>
                             <h3 className={s.title}>{item.title}</h3>
-                            <p className={s.description}>{item.description} <span className={s.stack}>{item.stack}</span></p>
+                            <p className={s.description}>{item.description} <div className={s.stack}>{item.stack}</div></p>
                         </div>
                     </div>
                 )
