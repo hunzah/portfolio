@@ -38,7 +38,7 @@ const projects: ProjectsType[] = [
         id: v1(), img: {backgroundImage: `url(${SanAndreas})`},
         link: 'https://hunzah.github.io/Meals/', title: 'Health Plate',
         description: 'A website for selecting and delivering personalized meals.',
-        stack: `Stack: TypeScript, React, Class Components Redux, ReduxForm.`
+        stack: `Stack: JavaScript`
     },
 ]
 
