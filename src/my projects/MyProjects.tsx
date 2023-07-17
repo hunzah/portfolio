@@ -32,7 +32,7 @@ const projects: ProjectsType[] = [
         id: v1(), img: {backgroundImage: `url(${SanAndreas})`},
         link: 'https://hunzah.github.io/React-TS-Project-Social-Network', title: 'Social Network',
         description: 'Social Network',
-        stack: `Stack: TypeScript, React based on class components. Class Components Redux, ReduxForm.`
+        stack: `Stack: React based on class components, TypeScript, Redux, ReduxForm.`
     },
     {
         id: v1(), img: {backgroundImage: `url(${SanAndreas})`},
