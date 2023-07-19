@@ -20,7 +20,7 @@ const Nav = () => {
                 <div className={`${s.burger}`} onClick={toggleMenu}>
                     <FontAwesomeIcon className={s.burgerXIcon} icon={faX} size="2xl"/>
                 </div>
-                <ul className={s.list}>
+                <ul className={`${s.list} ${isMenuOpen ? s.animated : ""}`}>
                     <li><a href="#main" onClick={() => scroll.scrollTo(100)}>About me</a></li>
                     <li><a href="#skills" onClick={() => scroll.scrollTo(500)}>Skills</a></li>
                     <li><a href="#projects" onClick={() => scroll.scrollTo(1100)}>Projects</a></li>
