@@ -5,12 +5,11 @@ import ava from '../assets/images/photo_2023-07-13_19-22-53.jpg'
 import DividerSpace from '../common/components/dividerSpace/DividerSpace';
 
 
-
 const photo = {backgroundImage: `url(${ava})`}
 
 const Main = () => {
     return (
-        <div className={s.main}>
+        <div id={'main'} className={s.main}>
             <div className={`${s.container} ${stylesContainer.container}`}>
                 <div className={s.photoWrap} style={photo}></div>
                 <div className={s.textBlock}>

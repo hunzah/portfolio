@@ -17,6 +17,7 @@ import CSSLight from './../assets/images/CSSLight.svg'
 import DividerSpace from '../common/components/dividerSpace/DividerSpace';
 // @ts-ignore
 import Fade from 'react-reveal/Fade';
+
 type PropsType = {
     isDarkMode: boolean
 }
@@ -41,7 +42,7 @@ const Skills = (props: PropsType) => {
 
     return (
         <div className={s.skillsBlock}>
-            <div className={`${stylesContainer.container} ${s.skillsContainer}`}>
+            <div id={'skills'} className={`${stylesContainer.container} ${s.skillsContainer}`}>
                 <Fade top>
                 <Title title={'Skills'}/>
                 <div className={s.skills}>

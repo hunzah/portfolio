@@ -67,7 +67,7 @@ const Contact = () => {
 
 
     return (
-        <div className={`${stylesContainer.container} ${s.contactContainer}`}>
+        <div id={'contacts'} className={`${stylesContainer.container} ${s.contactContainer}`}>
             <Fade top>
             <ToastContainer
                 position="bottom-left"

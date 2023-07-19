@@ -52,7 +52,7 @@ const MyProjects = () => {
             <Fade top>
                 <div className={`${stylesContainer.container} ${s.projectContainer}`}>
 
-                    <div className={s.title}>
+                    <div id={'projects'} className={s.title}>
                         <Title title={'Projects'}/>
                     </div>
                     <div className={s.projects}>
