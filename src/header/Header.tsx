@@ -4,6 +4,7 @@ import Nav from '../nav/Nav';
 import logo from '../assets/images/letter-y-blue.svg'
 import logoLight from '../assets/images/letter-y-green.svg'
 import stylesContainer from './../common/styles/Container.module.css'
+import BurgerNav from '../nav/burgerNav/BurgerNav';
 
 type PropsType = {
     isDarkMode: boolean
@@ -15,6 +16,7 @@ const Header = (props: PropsType) => {
                 {props.isDarkMode ? <img alt={'logo'} src={logoLight}/> : <img alt={'logo'} src={logo}/>}
                 <h2>Yusup <span className={s.lastName}>Magomedov</span></h2>
             </div>
+            <BurgerNav/>
             <Nav/>
         </div>
     );

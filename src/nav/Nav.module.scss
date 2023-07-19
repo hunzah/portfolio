@@ -2,7 +2,6 @@
 @import './src/common/styles/sass/mixins';
 
 .container {
-  //border: 1px white solid;
   width: 60%;
   height: 100%;
   display: flex;
@@ -29,40 +28,15 @@
 
 @media screen and (max-width: 768px) {
   .container {
+    display: none;
     justify-content: center;
     width: 3vw;
-
-
-
     .burgerIcon {
       display: block;
-
-
     }
   }
   .navList li {
     display: none;
 
   }
-
 }
-
-
-//.navListMobile li {
-//  position: absolute;
-//  top: 0;
-//  right: 0;
-//  display: flex;
-//  flex-direction: column;
-//  box-sizing: border-box;
-//  text-decoration: none;
-//  z-index: 999; /* устанавливаем высокий индекс для элементов */
-//}
-//
-//.navListMobile a {
-//  text-decoration: none;
-//  @include text(600, 14px);
-//  color: $secondTextColor;
-//  margin-bottom: 10px; /* добавляем отступ между элементами */
-//}
-
