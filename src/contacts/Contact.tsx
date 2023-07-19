@@ -6,7 +6,10 @@ import {useFormik} from 'formik';
 import * as Yup from 'yup';
 import {toast, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+// @ts-ignore
+import Fade from 'react-reveal/Fade';
+// @ts-ignore
+import ReactTypingEffect from 'react-typing-effect';
 
 const Contact = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -65,6 +68,7 @@ const Contact = () => {
 
     return (
         <div className={`${stylesContainer.container} ${s.contactContainer}`}>
+            <Fade top>
             <ToastContainer
                 position="bottom-left"
                 autoClose={5000}
@@ -125,11 +129,12 @@ const Contact = () => {
 
                 <button disabled={isDisabled || formik.isSubmitting} type="submit"
                         className={`${s.button} ${isDisabled ? s.disable : ''}`}>
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    <ReactTypingEffect text={isSubmitting ? 'Sending...' : 'Send Message'} eraseSpeed={0}/>
+
                 </button>
 
             </form>
-
+            </Fade>
         </div>
     );
 };

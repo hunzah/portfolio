@@ -5,6 +5,7 @@ import ava from '../assets/images/photo_2023-07-13_19-22-53.jpg'
 import DividerSpace from '../common/components/dividerSpace/DividerSpace';
 
 
+
 const photo = {backgroundImage: `url(${ava})`}
 
 const Main = () => {

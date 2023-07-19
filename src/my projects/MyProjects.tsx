@@ -6,6 +6,8 @@ import {v1} from 'uuid';
 import {Title} from '../common/components/title/Title';
 import SanAndreas from '../assets/images/SanAndreas.jpg';
 import DividerSpace from '../common/components/dividerSpace/DividerSpace';
+// @ts-ignore
+import Fade from 'react-reveal/Fade';
 
 export type ProjectsType = {
     id: string
@@ -26,7 +28,7 @@ const projects: ProjectsType[] = [
     },
     {
         id: v1(), img: {backgroundImage: `url(${SanAndreas})`}, link: 'https://hunzah.github.io/counter',
-        title: 'Counter',stack: `Stack: TypeScript, React, Redux.`
+        title: 'Counter', stack: `Stack: TypeScript, React, Redux.`
     },
     {
         id: v1(), img: {backgroundImage: `url(${SanAndreas})`},
@@ -47,16 +49,21 @@ const MyProjects = () => {
 
     return (
         <div className={s.myProjects}>
-            <div className={`${stylesContainer.container} ${s.projectContainer}`}>
-                <div className={s.title}>
-                    <Title title={'Projects'}/>
+            <Fade top>
+                <div className={`${stylesContainer.container} ${s.projectContainer}`}>
+
+                    <div className={s.title}>
+                        <Title title={'Projects'}/>
+                    </div>
+                    <div className={s.projects}>
+                        <Project projects={projects}/>
+                    </div>
+
                 </div>
-                <div className={s.projects}>
-                    <Project projects={projects}/>
-                </div>
-            </div>
-            <DividerSpace/>
+                <DividerSpace/>
+            </Fade>
         </div>
+
     );
 };
 
