@@ -4,9 +4,11 @@
 
 .container {
   display: none;
+
   .burgerXIcon {
     color: var(--textColor);
   }
+
   .burgerIcon {
     color: var(--textColor);
   }
@@ -22,9 +24,8 @@
       display: none;
     }
 
-
-
     .list {
+
       list-style: none;
       position: absolute;
       top: 50px;
@@ -53,7 +54,8 @@
       }
 
       .link {
-        opacity: 0.2;
+        opacity: 0.4;
+        pointer-events: auto;
       }
     }
   }
@@ -76,4 +78,33 @@
     opacity: 1;
     transform: translateX(0%);
   }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: block;
+
+  }
+
+  .navOpen {
+    opacity: 0.8;
+
+    .list {
+      width: 250px;
+      height: 100em;
+
+      .li {
+        .active {
+          opacity: 1.5;
+        }
+      }
+
+      .link {
+        opacity: 0.8;
+        pointer-events: auto;
+      }
+    }
+  }
+
+
 }

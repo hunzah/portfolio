@@ -42,7 +42,7 @@ const Nav = () => {
                     spy={true}
                     smooth={true}
                     hashSpy={true}
-                    offset={-50}
+                    offset={-70}
                     duration={800}
                     isDynamic={true}>Contacts</Link></li>
             </ul>
