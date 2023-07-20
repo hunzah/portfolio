@@ -20,11 +20,11 @@ const Nav = () => {
                 <div className={`${s.burger}`} onClick={toggleMenu}>
                     <FontAwesomeIcon className={s.burgerXIcon} icon={faX} size="2xl"/>
                 </div>
-                <ul className={`${s.list} ${isMenuOpen ? s.animated : ""}`}>
-                    <li><a href="#main" onClick={() => scroll.scrollTo(100)}>About me</a></li>
-                    <li><a href="#skills" onClick={() => scroll.scrollTo(500)}>Skills</a></li>
+                <ul className={s.list}>
+                    <li><a href="#main" onClick={() => scroll.scrollTo(200)}>About me</a></li>
+                    <li><a href="#skills" onClick={() => scroll.scrollTo(900)}>Skills</a></li>
                     <li><a href="#projects" onClick={() => scroll.scrollTo(1100)}>Projects</a></li>
-                    <li><a href="#contacts" onClick={() => scroll.scrollTo(1500)}>Contacts</a></li>
+                    <li><a href="#contacts" onClick={() => scroll.scrollTo(2500)}>Contacts</a></li>
                 </ul>
             </div>
         </div>
