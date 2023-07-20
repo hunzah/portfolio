@@ -5,6 +5,10 @@ import Project from './project/Project';
 import {v1} from 'uuid';
 import {Title} from '../common/components/title/Title';
 import SanAndreas from '../assets/images/SanAndreas.jpg';
+import todo from '../assets/images/projects/todolist.gif';
+import counter from '../assets/images/projects/counter.png';
+import SN from '../assets/images/projects/social-network.png';
+import HealthPlate from '../assets/images/projects/food-store.png';
 import DividerSpace from '../common/components/dividerSpace/DividerSpace';
 // @ts-ignore
 import Fade from 'react-reveal/Fade';
@@ -21,23 +25,23 @@ export type ProjectsType = {
 
 const projects: ProjectsType[] = [
     {
-        id: v1(), img: {backgroundImage: `url(${SanAndreas})`}, link: 'https://hunzah.github.io/Todo-List',
+        id: v1(), img: {backgroundImage: `url(${todo})`}, link: 'https://hunzah.github.io/Todo-List',
         title: 'Todo List', description: `This project is a todo list created as a personal project, 
         designed for easy tracking of tasks or items that need to be completed.`,
         stack: `Stack: TypeScript, React ReduxToolkit, MaterialUI, StoryBook.`
     },
     {
-        id: v1(), img: {backgroundImage: `url(${SanAndreas})`}, link: 'https://hunzah.github.io/counter',
+        id: v1(), img: {backgroundImage: `url(${counter})`}, link: 'https://hunzah.github.io/counter',
         title: 'Counter', stack: `Stack: TypeScript, React, Redux.`
     },
+    // {
+    //     id: v1(), img: {backgroundImage: `url(${SN})`},
+    //     link: 'https://hunzah.github.io/React-TS-Project-Social-Network', title: 'Social Network',
+    //     description: 'Social Network',
+    //     stack: `Stack: React based on class components, TypeScript, Redux, ReduxForm.`
+    // },
     {
-        id: v1(), img: {backgroundImage: `url(${SanAndreas})`},
-        link: 'https://hunzah.github.io/React-TS-Project-Social-Network', title: 'Social Network',
-        description: 'Social Network',
-        stack: `Stack: React based on class components, TypeScript, Redux, ReduxForm.`
-    },
-    {
-        id: v1(), img: {backgroundImage: `url(${SanAndreas})`},
+        id: v1(), img: {backgroundImage: `url(${HealthPlate})`},
         link: 'https://hunzah.github.io/Meals/', title: 'Health Plate',
         description: 'A website for selecting and delivering personalized meals.',
         stack: `Stack: JavaScript`
