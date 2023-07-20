@@ -1,5 +1,6 @@
 @import './src/common/styles/sass/mixins.scss';
-@import './src/common/styles/sass/variables.scss';
+//@import './src/common/styles/sass/variables.scss';
+@import './src/index.module';
 
 .header {
   display: flex;
@@ -22,7 +23,9 @@
 }
 
 .logo h2 {
-  color: $headerNameColor;
+
+  //color: $headerNameColor;
+  color: var(--headerNameColor);
   @include text(600, 20px)
 }
 
@@ -38,8 +41,10 @@
     width: 100%;
     z-index: 1;
     padding: 20px;
-    background-color: $backColor;
-    box-shadow: 2px 1px 10px $headerLineColor;
+    //background-color: $backColor;
+    background-color: var(--backColor);
+    //box-shadow: 2px 1px 10px $headerLineColor;
+    box-shadow: 2px 1px 10px var(--headerLineColor);
     height: 50px;
   }
   .logo img {
@@ -49,7 +54,8 @@
 
   }
   .logo h2 {
-    color: $headerNameColor;
+    //color: $headerNameColor;
+    color: var(--headerNameColor);
     @include text(600, 18px)
   }
 

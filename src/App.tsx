@@ -9,27 +9,20 @@ import Footer from './footer/Footer';
 import {Toggle} from './Togle';
 import {ThemeContext, themes} from './contexts/ThemeContext';
 
-
-function App() {
-    const [isDarkMode] = useState(true);
+type PropsType = {
+    value: boolean
+    onChange: (value: any) => void
+}
+function App({value,onChange}:PropsType) {
 
     return (
         <div className={s.App}>
-            <ThemeContext.Consumer>
-                {/*@ts-ignore*/}
-                {({theme, setTheme}) => (
                     <Toggle
-                        onChange={() => {
-                            if (theme === themes.light) setTheme(themes.dark)
-                            if (theme === themes.dark) setTheme(themes.light)
-                        }}
-                        value={theme === themes.dark}
-                    />
-                )}
-            </ThemeContext.Consumer>
-            <Header isDarkMode={isDarkMode}/>
+                        onChange={onChange}
+                        value={value}/>
+            <Header isDarkMode={!value}/>
             <Main/>
-            <Skills isDarkMode={isDarkMode}/>
+            <Skills isDarkMode={!value}/>
             <MyProjects/>
             <Contact/>
             <Footer/>

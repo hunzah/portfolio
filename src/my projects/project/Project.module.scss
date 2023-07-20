@@ -1,5 +1,6 @@
-@import '../../common/styles/sass/variables';
+//@import '../../common/styles/sass/variables';
 @import '../../common/styles/sass/mixins';
+@import './src/index.module';
 
 .project {
   width: 450px;
@@ -29,14 +30,17 @@
     .title {
 
       @include text(600, 16px);
-      color: $projTitlesColor;
+      //color: $projTitlesColor;
+      color: var(--projTitlesColor);
 
     }
 
     .description {
       @include text(400, 12px);
 
-      color: $thirdTextColor;
+      //color: $thirdTextColor;
+      color: var(--projTitlesColor);
+
       .stack {
         @include text(600, 12px);
         //text-align: center;
