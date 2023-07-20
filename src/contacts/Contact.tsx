@@ -32,43 +32,46 @@ const Contact = () => {
                 .required('Required'),
         }),
         onSubmit: async (values, {resetForm}) => {
-            setIsSubmitting(true);
 
             try {
+                setIsSubmitting(true);
                 const response = await fetch('https://formspree.io/f/xnqkqyjz', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify(values),
+                    body: JSON.stringify(values)
+
                 });
-                    toast.success('🙌 Your Message has been sent', {
-                        draggable: true,
-                        progress: undefined,
-                        theme: 'colored',
-                    });
+                setIsSubmitting(false);
+                toast.success('🙌 Your Message has been sent', {
+                    draggable: true,
+                    progress: undefined,
+                    theme: 'colored',
+                });
+
             } catch (error) {
+                setIsSubmitting(true);
+
                 toast.error('😲 Failed to send message. Please retry or contact me on Telegram', {
                     draggable: true,
                     progress: undefined,
                     theme: 'colored',
                 });
-            } finally {
                 setIsSubmitting(false);
             }
-
         },
     });
     const [isDisabled, setIsDisabled] = useState(false);
 
     useEffect(() => {
         setIsDisabled(!!Object.keys(formik.errors).length);
-    }, [formik.errors]);
+    }, [formik]);
 
 
     return (
         <div id={'contacts'} className={`${stylesContainer.container} ${s.contactContainer}`}>
-            <Fade top>
+
             <ToastContainer
                 position="bottom-left"
                 autoClose={5000}
@@ -77,63 +80,71 @@ const Contact = () => {
                 closeOnClick
                 rtl={false}
                 pauseOnFocusLoss
-
+                draggable
+                theme={'colored'}
             />
-            <Title title={'Contact'} className={s.title}/>
-            <form className={s.form} onSubmit={formik.handleSubmit}>
-                <label htmlFor="name"></label>
-                <input
-                    className={s.inputs}
-                    placeholder="Name"
-                    id="name"
-                    name="name"
-                    type="text"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.name}
-                />
+            <Fade top>
+                <Title title={'Contact'} className={s.title}/>
+                <form className={s.form} onSubmit={formik.handleSubmit}>
+                    <label htmlFor="name"></label>
+                    <input
+                        className={s.inputs}
+                        placeholder="Name"
+                        id="name"
+                        name="name"
+                        type="text"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.name}
+                    />
 
-                {formik.errors.name && formik.touched.name ?
-                    <div className={s.error}>{formik.errors.name}</div>
-                    : null}
+                    {formik.errors.name && formik.touched.name ?
+                        <div className={s.error}>{formik.errors.name}</div>
+                        : null}
 
-                <label htmlFor="email"></label>
-                <input
-                    className={s.inputs}
-                    placeholder="Email"
-                    id="email"
-                    name="email"
-                    type="email"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.email}
-                />
-                {formik.touched.email && formik.errors.email ? (
-                    <div className={s.error}>{formik.errors.email}</div>
-                ) : null}
+                    <label htmlFor="email"></label>
+                    <input
+                        className={s.inputs}
+                        placeholder="Email"
+                        id="email"
+                        name="email"
+                        type="email"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.email}
+                    />
+                    {formik.touched.email && formik.errors.email ? (
+                        <div className={s.error}>{formik.errors.email}</div>
+                    ) : null}
 
-                <label htmlFor="message"></label>
-                <textarea
-                    className={s.textarea}
-                    placeholder="Your Message"
-                    id="message"
-                    name="message"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.message}
-                />
-                {formik.touched.message && formik.errors.message ? (
-                    <div className={s.error}>{formik.errors.message}</div>
-                ) : null}
+                    <label htmlFor="message"></label>
+                    <textarea
+                        className={s.textarea}
+                        placeholder="Your Message"
+                        id="message"
+                        name="message"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.message}
+                    />
+                    {formik.touched.message && formik.errors.message ? (
+                        <div className={s.error}>{formik.errors.message}</div>
+                    ) : null}
+                    <button disabled={isDisabled || isSubmitting} type="submit"
+                            className={`${s.button} ${isDisabled || isSubmitting ? s.disable : ''}`}>
+                        {isSubmitting ? (
+                            <>
+                                {' '}
+                                <ReactTypingEffect staticText={`Sending`} text={'...⌛'} eraseSpeed={0}
+                                                   eraseDelay={2000} typingDelay={500}/>
+                            </>
+                        ) : (
+                            <ReactTypingEffect text={'Send Message'} eraseSpeed={0} typingDelay={1000}
+                                               eraseDelay={3500}/>
+                        )}
+                    </button>
 
-
-                <button disabled={isDisabled || formik.isSubmitting} type="submit"
-                        className={`${s.button} ${isDisabled ? s.disable : ''}`}>
-                    <ReactTypingEffect text={isSubmitting ? 'Sending...' : 'Send Message'} eraseSpeed={0}/>
-
-                </button>
-
-            </form>
+                </form>
             </Fade>
         </div>
     );
