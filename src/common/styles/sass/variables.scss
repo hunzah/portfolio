@@ -14,20 +14,20 @@ $darkThemeColors: (
         lineColor: #007ced,
         photoBorderColor: #444
 );
-$textColor: map-get($darkThemeColors, textColor);
-$headerNameColor: map-get($darkThemeColors, headerNameColor);
-$secondTextColor: map-get($darkThemeColors, secondTextColor);
-$thirdTextColor: map-get($darkThemeColors, thirdTextColor);
-$projTitlesColor: map-get($darkThemeColors, projTitlesColor);
-$footerLinksColor: map-get($darkThemeColors, footerLinksColor);
-$backColor: map-get($darkThemeColors, backColor);
-$footerBackColor: map-get($darkThemeColors, footerBackColor);
-$headerLineColor: map-get($darkThemeColors, headerLineColor);
-$secondColor: map-get($darkThemeColors, secondColor);
-$thirdColor: map-get($darkThemeColors, thirdColor);
-$lineColorMain: map-get($darkThemeColors, lineColorMain);
-$lineColor: map-get($darkThemeColors, lineColor);
-$photoBorderColor: map-get($darkThemeColors, photoBorderColor);
+$darkTextColor: map-get($darkThemeColors, textColor);
+$darkHeaderNameColor: map-get($darkThemeColors, headerNameColor);
+$darkSecondTextColor: map-get($darkThemeColors, secondTextColor);
+$darkThirdTextColor: map-get($darkThemeColors, thirdTextColor);
+$darkProjTitlesColor: map-get($darkThemeColors, projTitlesColor);
+$darkFooterLinksColor: map-get($darkThemeColors, footerLinksColor);
+$darkBackColor: map-get($darkThemeColors, backColor);
+$darkFooterBackColor: map-get($darkThemeColors, footerBackColor);
+$darkHeaderLineColor: map-get($darkThemeColors, headerLineColor);
+$darkSecondColor: map-get($darkThemeColors, secondColor);
+$darkThirdColor: map-get($darkThemeColors, thirdColor);
+$darkLineColorMain: map-get($darkThemeColors, lineColorMain);
+$darkLineColor: map-get($darkThemeColors, lineColor);
+$darkPhotoBorderColor: map-get($darkThemeColors, photoBorderColor);
 
 
 

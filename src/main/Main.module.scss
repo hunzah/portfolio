@@ -1,5 +1,5 @@
 @import './src/common/styles/sass/mixins';
-@import './src/common/styles/sass/variables';
+@import './src/index.module';
 
 
 .main .container {
@@ -13,10 +13,12 @@
     width: 30vw;
     height: 30vw;
     border-radius: 1000px;
-    background-color: $photoBorderColor;
+    //background-color:  $photoBorderColor;
+    background-color: var(--photoBorderColor) ;
     //background-size: 100%;
     //background-position: center;
-    border: 18px solid $photoBorderColor;
+    //border: 18px solid $photoBorderColor;
+    border: 18px solid var(--photoBorderColor);
     -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, .8);
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, .8);
     transition: background-position 0.2s ease-out;
@@ -28,7 +30,7 @@
   }
 
   .textBlock {
-    color: $thirdTextColor;
+    color: var(--thirdTextColor);
     width: 500px;
     @include text(600, 14px);
     text-align: justify;
@@ -36,7 +38,7 @@
 
     .name {
       line-height: 1.75em;
-      color: $textColor;
+      color: var(--textColor);
       @include text(600, 48px);
     }
   }
