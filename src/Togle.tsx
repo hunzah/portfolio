@@ -4,7 +4,7 @@ import s from './App.module.scss';
 
 type PropsType = {
     value: boolean
-    onChange: (value: boolean) => void
+    onChange: (value: any) => void
 }
 export const Toggle = ({value, onChange}: PropsType) => {
     return (
@@ -12,7 +12,6 @@ export const Toggle = ({value, onChange}: PropsType) => {
             <input
                 id="toggler"
                 type="checkbox"
-                /*@ts-ignore*/
                 onClick={onChange}
                 checked={value}
                 readOnly
