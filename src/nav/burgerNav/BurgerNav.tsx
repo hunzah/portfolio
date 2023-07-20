@@ -8,7 +8,7 @@ import * as Scroll from 'react-scroll';
 let Link = Scroll.Link;
 
 const Nav = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(true);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
