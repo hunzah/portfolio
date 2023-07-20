@@ -41,8 +41,8 @@ const Skills = (props: PropsType) => {
     ]
 
     return (
-        <div className={s.skillsBlock}>
-            <div id={'skills'} className={`${stylesContainer.container} ${s.skillsContainer}`}>
+        <div id={'skills'} className={s.skillsBlock}>
+            <div  className={`${stylesContainer.container} ${s.skillsContainer}`}>
                 <Fade top>
                 <Title title={'Skills'}/>
                 <div className={s.skills}>

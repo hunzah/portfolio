@@ -35,14 +35,13 @@
         @include text(400, 24px);
         padding-bottom: 16px;
         cursor: pointer;
-      }
-      .active{
-        background-color: black;
-      }
 
-      a {
-        text-decoration: none;
-        color: $textColor;
+        .active{
+          opacity: 1;
+        }
+      }
+      .link{
+        opacity: 0.2;
       }
     }
   }

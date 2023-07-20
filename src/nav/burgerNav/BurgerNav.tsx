@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import s from './BurgerNav.module.scss'
-// @ts-ignore
-import {animateScroll as scroll, Button, Element, Events, Link, scroller, scrollSpy} from 'react-scroll';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars, faX} from '@fortawesome/free-solid-svg-icons';
+// @ts-ignore
+import * as Scroll from 'react-scroll';
+
+let Link = Scroll.Link;
 
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(true);
@@ -21,10 +23,38 @@ const Nav = () => {
                     <FontAwesomeIcon className={s.burgerXIcon} icon={faX} size="2xl"/>
                 </div>
                 <ul className={s.list}>
-                    <li><a href="#main" onClick={() => scroll.scrollTo(200)}>About me</a></li>
-                    <li><a href="#skills" onClick={() => scroll.scrollTo(900)}>Skills</a></li>
-                    <li><a href="#projects" onClick={() => scroll.scrollTo(1100)}>Projects</a></li>
-                    <li><a href="#contacts" onClick={() => scroll.scrollTo(2500)}>Contacts</a></li>
+                    <li><Link className={s.link}
+                              activeClass={s.active}
+                              spy={true}
+                              smooth={true}
+                              hashSpy={true}
+                              offset={-50}
+                              duration={800}
+                              to={'aboutMe'}>About me</Link></li>
+                    <li><Link className={s.link}
+                              activeClass={s.active}
+                              spy={true}
+                              smooth={true}
+                              hashSpy={true}
+                              offset={-50}
+                              duration={800}
+                              to={'skills'}>Skills</Link></li>
+                    <li><Link className={s.link}
+                              activeClass={s.active}
+                              spy={true}
+                              smooth={true}
+                              hashSpy={true}
+                              offset={-50}
+                              duration={800}
+                              to={'projects'}>Projects</Link></li>
+                    <li><Link className={s.link}
+                              activeClass={s.active}
+                              spy={true}
+                              smooth={true}
+                              hashSpy={true}
+                              offset={-200}
+                              duration={800}
+                              to={'contacts'}>Contacts</Link></li>
                 </ul>
             </div>
         </div>

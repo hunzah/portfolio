@@ -9,7 +9,7 @@ const photo = {backgroundImage: `url(${ava})`}
 
 const Main = () => {
     return (
-        <div id={'main'} className={s.main}>
+        <div id={'aboutMe'} className={s.main}>
             <div className={`${s.container} ${stylesContainer.container}`}>
                 <div className={s.photoWrap} style={photo}></div>
                 <div className={s.textBlock}>

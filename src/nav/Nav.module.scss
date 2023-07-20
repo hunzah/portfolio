@@ -14,12 +14,14 @@
   @include text(600, 14px);
   color: $secondTextColor;
   text-decoration: none;
+
 }
 
 .navList li {
   display: inline-block;
   margin: 0;
   padding-right: 5vw;
+  cursor: pointer;
 }
 
 .burgerIcon {

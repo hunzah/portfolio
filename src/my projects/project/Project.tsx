@@ -14,9 +14,9 @@ const Project = (props: PropsType) => {
         <>
             {projects.map(item => {
                 return (
-                    <div key={item.id} className={s.project} >
+                    <div id={'projects'} key={item.id} className={s.project} >
                         <a className={s.imgContainer} style={item.img} href={item.link} target="_blank">
-                            {/*<div className={s.link} ></div>*/}
+
                         </a>
 
                         <div className={s.projectInfo}>

@@ -1,19 +1,51 @@
-import React, {useState} from 'react';
+import React from 'react';
 import s from './Nav.module.scss'
-import {faBars} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 // @ts-ignore
-import {animateScroll as scroll, Button, Element, Events, Link, scroller, scrollSpy} from 'react-scroll';
+import * as Scroll from 'react-scroll';
+
+let Link = Scroll.Link;
 
 const Nav = () => {
     return (
         <div className={s.container}>
-                <ul className={s.navList}>
-                    <li><a href="#main" onClick={() => scroll.scrollTo(100)}>About me</a></li>
-                    <li><a href="#skills" onClick={() => scroll.scrollTo(500)}>Skills</a></li>
-                    <li><a href="#projects" onClick={() => scroll.scrollTo(1100)}>Projects</a></li>
-                    <li><a href="#contacts" onClick={() => scroll.scrollTo(1500)}>Contacts</a></li>
-                </ul>
+            <ul className={s.navList}>
+
+                <li><Link
+                    to={'aboutMe'}
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    offset={-50}
+                    duration={800}
+                    isDynamic={true}>About me</Link></li>
+
+                <li><Link
+                    to={'skills'}
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    offset={-50}
+                    duration={800}
+                    isDynamic={true}>Skills</Link></li>
+
+                <li><Link
+                    to={'projects'}
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    offset={-50}
+                    duration={800}
+                    isDynamic={true}>Projects</Link></li>
+
+                <li><Link
+                    to={'contacts'}
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    offset={-50}
+                    duration={800}
+                    isDynamic={true}>Contacts</Link></li>
+            </ul>
         </div>
     );
 };

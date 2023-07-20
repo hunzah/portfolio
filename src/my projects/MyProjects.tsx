@@ -48,11 +48,11 @@ const projects: ProjectsType[] = [
 const MyProjects = () => {
 
     return (
-        <div className={s.myProjects}>
+        <div  className={s.myProjects}>
             <Fade top>
                 <div className={`${stylesContainer.container} ${s.projectContainer}`}>
 
-                    <div id={'projects'} className={s.title}>
+                    <div  className={s.title}>
                         <Title title={'Projects'}/>
                     </div>
                     <div className={s.projects}>
