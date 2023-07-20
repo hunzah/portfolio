@@ -4,6 +4,12 @@
 
 .container {
   display: none;
+  .burgerXIcon {
+    color: var(--textColor);
+  }
+  .burgerIcon {
+    color: var(--textColor);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -15,6 +21,8 @@
     .burgerIcon {
       display: none;
     }
+
+
 
     .list {
       list-style: none;
@@ -33,6 +41,7 @@
       animation: slideIn 0.8s forwards;
 
       li {
+        color: var(--textColor);
         width: 100%;
         @include text(400, 24px);
         padding-bottom: 16px;
