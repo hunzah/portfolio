@@ -35,6 +35,11 @@
     @include text(600, 14px);
     text-align: justify;
 
+    .typingText {
+      @include text(400, 16px);
+      color: #AAAAAA;
+      margin-bottom: -16px;
+    }
 
     .name {
       line-height: 1.75em;
@@ -46,10 +51,17 @@
 }
 
 @media screen and (max-width: 920px) {
-  .main .container .textBlock .name {
-    @include text(600, 36px);
-    text-align: center;
-    padding: 15px 0;
+  .main .container .textBlock {
+    .name {
+      @include text(600, 36px);
+      text-align: center;
+      padding: 15px 0;
+    }
+    .typingText {
+      margin-top: 36px;
+      margin-bottom: -26px;
+      text-align: center;
+    }
   }
   .main .container .photoWrap {
     width: 50vw;
