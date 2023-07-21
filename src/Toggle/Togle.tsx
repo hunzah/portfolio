@@ -17,7 +17,6 @@ export const Toggle = ({ value, onChange }: PropsType) => {
 
     return (
         <label className={`${s.toggleTheme} ${s.toggle}`} htmlFor="toggler">
-            {/*<button onClick={handleToggle}>{value ? 'light mode' : 'dark mode'}</button>*/}
             <input
                 id="toggler"
                 type="checkbox"
