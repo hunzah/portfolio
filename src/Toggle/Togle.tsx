@@ -16,7 +16,7 @@ export const Toggle = ({ value, onChange }: PropsType) => {
     };
 
     return (
-        <label className={`${s.toggleTheme} ${s.toggle}`} htmlFor="toggler">
+        <label className={s.toggleTheme} htmlFor="toggler">
             <input
                 id="toggler"
                 type="checkbox"
@@ -27,7 +27,7 @@ export const Toggle = ({ value, onChange }: PropsType) => {
 
             <span className={isChecked ? s.checked : ""} />
             <span className={isChecked ? s.checked : ""} />
-            <div>{value ? 'light' : 'dark'}</div>
+
         </label>
     );
 };
