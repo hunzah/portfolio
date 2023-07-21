@@ -15,23 +15,27 @@ const Main = () => {
                 <div className={s.photoWrap} style={photo}></div>
                 <div className={s.textBlock}>
                     <div className={s.typingText}>
-                        <ReactTypingEffect  text={'Frontend Developer'}/>
+                        <ReactTypingEffect text={'Frontend Developer'}/>
                     </div>
                     <h1 className={s.name}>Yusup Magomedov</h1>
 
-                    <p className={s.text}>Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis,
-                        risus
-                        non condimentum
-                        gravida,
-                        odio mauris ullamcorper felis, ut venenatis purus ex eu mi. Quisque imperdiet lacinia urna, a
-                        placerat
-                        sapien pretium eu.</p>
+                    <p> Hello, I am frontend developer. I have experience in React,
+                        ReactNative, Redux, TypeScript development. processes. I
+                        improving my skills in this direction
+                        and plan to expand them with new
+                        technologies, such as Angular.
+                        I usually spend my free time
+                        reading IT-literature,
+                        Codewars and improving my
+                        English. <div>Open to your suggestions.</div>
+                    </p>
                 </div>
                 <DividerSpace/>
             </div>
 
         </div>
-    );
+    )
+        ;
 };
 
 export default Main;
