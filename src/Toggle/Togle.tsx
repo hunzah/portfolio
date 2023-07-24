@@ -7,7 +7,7 @@ type PropsType = {
     onChange: (value: any) => void;
 }
 
-export const Toggle = ({ value, onChange }: PropsType) => {
+export const Toggle = ({value, onChange}: PropsType) => {
     const [isChecked, setIsChecked] = useState(value);
 
     const handleToggle = () => {
@@ -25,8 +25,8 @@ export const Toggle = ({ value, onChange }: PropsType) => {
                 readOnly
             />
 
-            <span className={isChecked ? s.checked : ""} />
-            <span className={isChecked ? s.checked : ""} />
+            <span className={isChecked ? s.checked : ''}/>
+            <span className={isChecked ? s.checked : ''}/>
 
         </label>
     );
