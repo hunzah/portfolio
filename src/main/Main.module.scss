@@ -15,8 +15,10 @@
     border-radius: 1000px;
     //background-color:  $photoBorderColor;
     background-color: var(--photoBorderColor);
-    background-size: 100%;
+
+    background-size: 110%;
     background-position: center;
+
     //border: 18px solid $photoBorderColor;
     border: 18px solid var(--photoBorderColor);
     -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, .8);
