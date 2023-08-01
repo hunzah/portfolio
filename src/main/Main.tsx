@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Main.module.scss'
 import stylesContainer from '../common/styles/Container.module.css'
-import ava from '../assets/images/photo.jpg'
+import ava from '../assets/images/ava.jpg'
 import DividerSpace from '../common/components/dividerSpace/DividerSpace';
 // @ts-ignore
 import ReactTypingEffect from 'react-typing-effect';
