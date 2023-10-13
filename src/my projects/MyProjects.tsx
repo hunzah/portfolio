@@ -6,6 +6,7 @@ import { v1 } from 'uuid';
 import { Title } from '../common/components/title/Title';
 import todo from '../assets/images/projects/todolist.gif';
 import counter from '../assets/images/projects/counter.png';
+import cards from '../assets/images/projects/';
 import HealthPlate from '../assets/images/projects/food-store.png';
 import DividerSpace from '../common/components/dividerSpace/DividerSpace';
 // @ts-ignore
