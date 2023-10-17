@@ -5,8 +5,7 @@ import Project from './project/Project';
 import { v1 } from 'uuid';
 import { Title } from '../common/components/title/Title';
 import todo from '../assets/images/projects/todolist.gif';
-import counter from '../assets/images/projects/counter.png';
-import cards from '../assets/images/projects/';
+import cards from '../assets/images/projects/learn-cards.png';
 import HealthPlate from '../assets/images/projects/food-store.png';
 import DividerSpace from '../common/components/dividerSpace/DividerSpace';
 // @ts-ignore
@@ -30,14 +29,8 @@ const projects: ProjectsType[] = [
         stack: `Stack: TypeScript, React ReduxToolkit, MaterialUI, StoryBook.`
     },
     {
-        id: v1(), img: { backgroundImage: `url(${counter})` }, link: 'https://cards-hunzah.vercel.app',
-        title: 'Learn Cards', stack: `Stack: TypeScript, React, Redux.`
-    },
-    {
-        id: v1(), img: { backgroundImage: `url(${})` },
-        link: 'https://hunzah.github.io/Create-heroes-App/', title: 'Social Network',
-        description: 'Create your heroes 🦸‍',
-        stack: `Stack: React based on class components, RTK(Query), ReduxForm.`
+        id: v1(), img: { backgroundImage: `url(${cards})` }, link: 'https://cards-hunzah.vercel.app',
+        title: 'Learn Cards', stack: `Stack: TypeScript, React, RTK Query, Vite, adix.`
     },
     {
         id: v1(), img: { backgroundImage: `url(${HealthPlate})` },
