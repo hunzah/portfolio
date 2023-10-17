@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/resume/static/css/main.f55ac615.css",
-    "main.js": "/resume/static/js/main.119b0d0f.js",
+    "main.js": "/resume/static/js/main.3c98457f.js",
     "static/js/787.28cb0dcd.chunk.js": "/resume/static/js/787.28cb0dcd.chunk.js",
     "static/media/food-store.png": "/resume/static/media/food-store.be10e4667a91975e0c89.png",
     "static/media/todolist.gif": "/resume/static/media/todolist.fbf169bf20b40741369b.gif",
+    "static/media/learn-cards.png": "/resume/static/media/learn-cards.fb7d175ac1d74316869b.png",
     "static/media/ava.jpg": "/resume/static/media/ava.26314a92d99961cb275f.jpg",
-    "static/media/counter.png": "/resume/static/media/counter.ad1a82db074cf61c4e21.png",
     "static/media/TS.svg": "/resume/static/media/TS.5b37a368923edf7b37f951bd7d611983.svg",
     "static/media/TSLight.svg": "/resume/static/media/TSLight.8664c94a18e951f4209d179c92fa3ba9.svg",
     "static/media/React.svg": "/resume/static/media/React.6853e2c76d70ecdf111005707b87fb17.svg",
@@ -21,11 +21,11 @@
     "static/media/CSS.svg": "/resume/static/media/CSS.c8b6c619a83ca98b374ccb07a8893b5f.svg",
     "static/media/CSSLight.svg": "/resume/static/media/CSSLight.3427c947c08820a6618fbf57ab001d78.svg",
     "main.f55ac615.css.map": "/resume/static/css/main.f55ac615.css.map",
-    "main.119b0d0f.js.map": "/resume/static/js/main.119b0d0f.js.map",
+    "main.3c98457f.js.map": "/resume/static/js/main.3c98457f.js.map",
     "787.28cb0dcd.chunk.js.map": "/resume/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f55ac615.css",
-    "static/js/main.119b0d0f.js"
+    "static/js/main.3c98457f.js"
   ]
 }
