@@ -1,10 +1,8 @@
 .skillsBlock {
-
+  width: 100%;
 
   .skillsContainer {
-
     .skills {
-
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -13,8 +11,6 @@
         justify-content: center;
       }
     }
-
   }
-
 }
 

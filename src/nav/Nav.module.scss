@@ -1,6 +1,5 @@
-//@import './src/common/styles/sass/variables';
-@import './src/common/styles/sass/mixins';
-@import './src/index.module';
+@import '/src/common/styles/sass/mixins';
+@import '/src/index.module';
 .container {
   width: 60%;
   height: 100%;
@@ -12,7 +11,6 @@
 
 .navList a {
   @include text(600, 14px);
-  //color:  $secondTextColor;
   color: var(--secondTextColor);
   text-decoration: none;
 

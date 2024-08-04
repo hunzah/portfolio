@@ -1,6 +1,5 @@
-//@import './src/common/styles/sass/variables';
-@import './src/common/styles/sass/mixins';
-@import './src/index.module';
+@import '/src/common/styles/sass/mixins';
+@import '/src/index.module';
 
 
 .contactContainer {
@@ -26,18 +25,15 @@
     textarea {
       @include text(400, 12px);
       width: 100%;
-      //background-color: $lineColorMain;
       background-color: var(--lineColorMain);
       color: var(--textColor);
       padding: 5px;
-      //border: 1px solid $secondColor;
       border: 1px solid var(--secondColor);
       margin-bottom: 10px;
       max-width: 100%;
       min-width: 100%;
 
       &::placeholder {
-        //color: $secondColor;
         color: var(--secondColor);
       }
     }
@@ -57,7 +53,6 @@
       max-width: 170px;
       height: 30px;
       background-color: transparent;
-      //color: $footerLinksColor;
       color: var(--footerLinksColor);
       border: none;
       cursor: pointer;
@@ -69,7 +64,6 @@
         display: block;
         height: 5px;
         width: 100%;
-        //background-color: $lineColor;
         background-color: var(--lineColor);
         position: absolute;
         bottom: 0;
@@ -78,10 +72,8 @@
       }
 
       &:hover {
-        //background-color: $lineColor;
         background-color: var(--lineColor);
         transition-delay: 0.3s;
-        //color: $textColor;
         color: var(--textColor);
 
         &::after {

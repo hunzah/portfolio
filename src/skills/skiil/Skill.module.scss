@@ -1,6 +1,5 @@
 @import '/src/common/styles/sass/mixins';
-//@import '/src/common/styles/sass/variables';
-@import './src/index.module';
+@import '/src/index.module';
 .skill {
   width: 140px;
   padding: 0 15px 15px;
@@ -17,7 +16,6 @@
 }
 
 .title {
-  //color: $secondTextColor;
   color: var(--secondTextColor);
   @include text(600, 24)
 }

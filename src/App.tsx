@@ -24,7 +24,7 @@ function App({value, onChange}: PropsType) {
             <Header isDarkMode={!value}/>
             <Main/>
             <Skills isDarkMode={!value}/>
-            <MyProjects/>
+            <MyProjects isDarkMode={!value}/>
             <Contact/>
             <Footer/>
 

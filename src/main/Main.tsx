@@ -18,16 +18,8 @@ const Main = () => {
                         <ReactTypingEffect text={'Frontend Developer'}/>
                     </div>
                     <h1 className={s.name}>Yusup Magomedov</h1>
-
-                    <p> Hello, I am frontend developer. I have experience in React,
-                        ReactNative, Redux, TypeScript development. processes. I
-                        improving my skills in this direction
-                        and plan to expand them with new
-                        technologies, such as Angular.
-                        I usually spend my free time
-                        reading IT-literature,
-                        Codewars and improving my
-                        English. <div>Open to your suggestions.</div>
+                    <p> Hello, I am frontend developer. I have experience in TypeScript, React,
+                        NextJS, Angular, NestJS development. <div>Open to your suggestions.</div>
                     </p>
                 </div>
                 <DividerSpace/>
