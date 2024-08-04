@@ -1,17 +1,13 @@
-//@import './src/common/styles/sass/variables';
 @import '/src/common/styles/sass/mixins';
 @import '/src/index.module';
 
 .footer {
+  position: relative;
+  width: 100%;
   @include text(400, 13px);
   background: var(--footerBackColor);
   margin: 60px 0 0;
   padding: 15px 45px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  position: relative;
 
   &::before {
     content: '';
@@ -25,21 +21,29 @@
     z-index: 2;
   }
 
-  a {
-    opacity: .6;
-    line-height: 21px;
-    margin-right: 25px;
-    text-decoration: none;
-    color: var(--footerLinksColor);
+  .itemsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    &:hover {
-      opacity: 1;
+    max-width: 1920px;
+    margin: auto;
+    a {
+      opacity: .6;
+      line-height: 21px;
+      margin-right: 25px;
+      text-decoration: none;
+      color: var(--footerLinksColor);
+
+      &:hover {
+        opacity: 1;
+      }
     }
-  }
 
-  p {
-    opacity: .6;
-    color: var(--footerLinksColor);
+    p {
+      opacity: .6;
+      color: var(--footerLinksColor);
+    }
   }
 }
 

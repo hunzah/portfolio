@@ -24,10 +24,8 @@ const Main = () => {
                 </div>
                 <DividerSpace/>
             </div>
-
         </div>
-    )
-        ;
+    );
 };
 
 export default Main;
