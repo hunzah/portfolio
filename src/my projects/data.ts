@@ -1,10 +1,3 @@
-import {v1} from 'uuid';
-import todo from '../assets/images/projects/todolist.gif';
-import spaceAI from '../assets/images/projects/SpaceAI.svg';
-import wildberries from '../assets/images/projects/wildberries-logo.webp';
-import HealthPlate from '../assets/images/projects/food-store.png';
-import cards from '../assets/images/projects/flashcards.webp';
-
 export type ProjectsType = {
     id: string
     img: { backgroundImage: string }
@@ -26,7 +19,7 @@ export const petProjects: ProjectsType[] = [
     {
         id: v1(), img: {backgroundImage: `url(${todo})`}, link: 'https://hunzah.github.io/Todo-List',
         title: 'Todo List',
-        description: `This project is a todo list created as a personal project,
+        description: `This project is a todo list created as a personal project, 
         designed for easy tracking of tasks or items that need to be completed.`,
         stack: `Stack: TypeScript, React ReduxToolkit, MaterialUI, StoryBook.`
     },
