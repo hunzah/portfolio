@@ -14,7 +14,7 @@ const Skill = (props: PropsType) => {
             {skills.map(item => {
                 return (
                     <div className={s.skill} key={item.id}>
-                        <img alt={item.title} src={item.img} className={s.img} />
+                        <img alt={item.title} src={item.img} className={`${s.img } ${item.spin && s.spin}`} />
                         <h3 className={s.title}>{item.title}</h3>
                     </div>
                 )

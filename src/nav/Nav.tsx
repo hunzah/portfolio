@@ -36,6 +36,14 @@ const Nav = () => {
                     offset={-50}
                     duration={800}
                     isDynamic={true}>Projects</Link></li>
+                <li><Link
+                    to={'pet-projects'}
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    offset={-50}
+                    duration={800}
+                    isDynamic={true}>Pet-Projects</Link></li>
 
                 <li><Link
                     to={'contacts'}

@@ -31,11 +31,11 @@ const Contact = () => {
                 .min(15, 'Must be at least 15 characters')
                 .required('Required'),
         }),
-        onSubmit: async (values, {resetForm}) => {
+        onSubmit: async (values) => {
 
             try {
                 setIsSubmitting(true);
-                const response = await fetch('https://formspree.io/f/xnqkqyjz', {
+                 await fetch('https://formspree.io/f/xnqkqyjz', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

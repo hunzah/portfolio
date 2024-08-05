@@ -1,23 +1,24 @@
 import React from 'react';
 import s from './MyProjects.module.scss'
-import stylesContainer from './../common/styles/Container.module.css'
+import stylesContainer from '../common/styles/Container.module.css'
 import Project from './project/Project';
 import {Title} from '../common/components/title/Title';
 import DividerSpace from '../common/components/dividerSpace/DividerSpace';
 // @ts-ignore
 import Fade from 'react-reveal/Fade';
-import {projects} from "./data";
+import {petProjects} from "./data";
 
-const MyProjects = () => {
+
+const MyPetProjects = () => {
     return (
-        <div id={'projects'} className={s.myProjects}>
+        <div id={'pet-projects'} className={s.myProjects}>
             <Fade top>
                 <div className={`${stylesContainer.container} ${s.projectContainer}`}>
                     <div className={s.title}>
-                        <Title title={'Projects i worked on'}/>
+                        <Title title={'My pet-projects'}/>
                     </div>
                     <div className={s.projects}>
-                        <Project projects={projects}/>
+                        <Project projects={petProjects}/>
                     </div>
                 </div>
                 <DividerSpace/>
@@ -27,4 +28,4 @@ const MyProjects = () => {
     );
 };
 
-export default MyProjects;
+export default MyPetProjects;

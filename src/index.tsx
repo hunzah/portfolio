@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.module.scss';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import ThemeProvider from './providers/ThemeProvider';
 
 import {ThemeContext, themes} from './contexts/ThemeContext';
@@ -31,6 +30,4 @@ root.render(
     </React.StrictMode>
 );
 
-
-reportWebVitals();
 

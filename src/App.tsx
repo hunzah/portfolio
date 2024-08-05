@@ -7,6 +7,7 @@ import MyProjects from './my projects/MyProjects';
 import Contact from './contacts/Contact';
 import Footer from './footer/Footer';
 import {Toggle} from './Toggle/Togle';
+import MyPetProjects from "./my projects/MyPetProjects";
 
 
 type PropsType = {
@@ -24,10 +25,10 @@ function App({value, onChange}: PropsType) {
             <Header isDarkMode={!value}/>
             <Main/>
             <Skills isDarkMode={!value}/>
-            <MyProjects isDarkMode={!value}/>
+            <MyProjects/>
+            <MyPetProjects/>
             <Contact/>
             <Footer/>
-
         </div>
     );
 }
